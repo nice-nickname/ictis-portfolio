@@ -6,8 +6,7 @@ export default function(actor: (req: Request, res: Response, next: NextFunction)
             await actor(req, res, next)
         }
         catch(er) {
-            res.sendStatus(400)
-            console.log(er)
+            next(er)
         }
     }
 }
