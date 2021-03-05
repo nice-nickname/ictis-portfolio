@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken"
 
 function callback(accessToken: string, refreshToken: string, params: any, profile: any, done: Function) {
     let data = jwt.decode(params.id_token)
-    console.log(data)
     done(null, data)
 } 
 
