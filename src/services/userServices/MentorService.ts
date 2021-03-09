@@ -4,11 +4,7 @@ import { Mentors } from "../../models/models";
 export default class MentorService {
 
     async getAllMentors() {
-        return Mentors.findAll({
-            attributes: {
-                exclude: ['id_mentor']
-            }
-        })
+        return Mentors.findAll()
     }
 
     async getMentorById(id: number) {

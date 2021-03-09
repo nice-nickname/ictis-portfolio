@@ -3,11 +3,7 @@ import { Students } from "../../models/models";
 export default class StudentService {
 
     async getAllStudents() {
-        return Students.findAll({
-            attributes: {
-                exclude: ['id_student']
-            }
-        })
+        return Students.findAll()
     }
 
     async getStudentById(id: number) {
