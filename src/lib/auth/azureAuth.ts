@@ -9,7 +9,7 @@ function callback(accessToken: string, refreshToken: string, params: any, profil
 
 passport.serializeUser((user: any, done) => {
     done(null, {
-        id: user.upn,
+        email: user.upn,
         name: user.name
     })
 })
