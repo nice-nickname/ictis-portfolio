@@ -27,7 +27,7 @@ export default class MentorService {
 
     async createMentor(mentor: {mentor_fullName: string, mentor_info: string}) {
         let ment = await Mentors.create(mentor)
-        return ment.get('id_mentor')
+        return Number(ment.get('id_mentor'))
     }
 
     async deleteMentor(id: number) {
