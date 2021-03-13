@@ -14,6 +14,12 @@ Students.init({
     },
     student_direction: {
         type: Sequelize.STRING(100)
+    },
+    student_email: {
+        type: Sequelize.STRING(100),
+        validate: {
+            isEmail: true
+        }
     }
 }, {
     sequelize,
