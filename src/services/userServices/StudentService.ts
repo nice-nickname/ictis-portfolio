@@ -14,7 +14,7 @@ export default class StudentService {
         })
     }
 
-    async createStudent(student: {student_fullName: string, student_direction: string}) {
+    async createStudent(student: {student_fullName: string, student_direction: string, student_email: string}) {
         let stud = await Students.create(student)
         return Number(stud.get('id_student'))
     }

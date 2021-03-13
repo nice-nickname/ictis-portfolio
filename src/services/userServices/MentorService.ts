@@ -25,7 +25,7 @@ export default class MentorService {
         })
     }
 
-    async createMentor(mentor: {mentor_fullName: string, mentor_info: string}) {
+    async createMentor(mentor: {mentor_fullName: string, mentor_info: string, mentor_email: string}) {
         let ment = await Mentors.create(mentor)
         return Number(ment.get('id_mentor'))
     }
