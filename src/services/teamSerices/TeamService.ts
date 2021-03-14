@@ -1,6 +1,6 @@
 import { Teams, Mentors, Students, StudentsTeams } from "../../models/models";
 
-interface Team {
+interface ITeam {
     team_name: string,
     id_mentor: number,
     ids_students: number[],
@@ -17,7 +17,7 @@ export default class TeamService {
 
     }
 
-    async createTeam(team: Team) {
+    async createTeam(team: ITeam) {
 
         let newTeam = await Teams.create({
             id_mentor: team.id_mentor,
