@@ -1,5 +1,12 @@
 import { Teams, Mentors, Students, StudentsTeams } from "../../models/models";
 
+interface Team {
+    team_name: string,
+    id_mentor: number,
+    ids_students: number[],
+    students_roles: string[]
+}
+
 export default class TeamService {
 
     async getAllTeams() {
@@ -10,7 +17,7 @@ export default class TeamService {
 
     }
 
-    async createTeam(team: {team_name: string, id_mentor: number, ids_students: number[], students_roles: string[]}) {
+    async createTeam(team: Team) {
 
         let newTeam = await Teams.create({
             id_mentor: team.id_mentor,

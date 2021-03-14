@@ -1,5 +1,13 @@
 import { Categories, Mentors, Projects, Students, StudentsTeams, Teams } from "../../models/models";
 
+interface IProject {
+    id_team: number,
+    id_category: number,
+    project_info: string,
+    project_name: string,
+    project_course: number,
+}
+
 export default class ProjectService {
 
     async getAllProjects() {
@@ -126,7 +134,7 @@ export default class ProjectService {
         })
     }
 
-    async createProject(project: any) {
+    async createProject(project: IProject) {
         
     }
 

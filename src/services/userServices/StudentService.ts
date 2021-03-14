@@ -1,5 +1,11 @@
 import { Students } from "../../models/models";
 
+interface IStudent {
+    student_fullName: string,
+    student_direction: string, 
+    student_email: string
+}
+
 export default class StudentService {
 
     async getAllStudents() {
@@ -14,7 +20,7 @@ export default class StudentService {
         })
     }
 
-    async createStudent(student: {student_fullName: string, student_direction: string, student_email: string}) {
+    async createStudent(student: IStudent) {
         let stud = await Students.create(student)
         return Number(stud.get('id_student'))
     }
