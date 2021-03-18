@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { Json } from "sequelize/types/lib/utils";
 import { ProjectService } from "../../services/services";
 
 const service = new ProjectService()
@@ -24,6 +23,7 @@ class ProjectController {
     }
 
     async getByProjectName(req: Request, res: Response, next: NextFunction) {
+        let name = req.params.name
 
     }
 

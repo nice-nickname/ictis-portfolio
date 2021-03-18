@@ -2,8 +2,8 @@ import { Students } from "../../models/models";
 
 interface IStudent {
     student_fullName: string,
-    student_direction: string, 
-    student_email: string
+    student_email: string,
+    student_year: string
 }
 
 export default class StudentService {

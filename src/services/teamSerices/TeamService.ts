@@ -10,11 +10,42 @@ interface ITeam {
 export default class TeamService {
 
     async getAllTeams() {
-
+        return Teams.findAll({
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
     }
 
     async getTeamById(id: number) {
-
+        return Teams.findOne({
+            where: {
+                id_team: id
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
     }
 
     async createTeam(team: ITeam) {
@@ -38,6 +69,10 @@ export default class TeamService {
     }
 
     async deleteTeam(id: number) {
-
+        Teams.destroy({
+            where: {
+                id_team: id
+            }
+        })
     }
 }
