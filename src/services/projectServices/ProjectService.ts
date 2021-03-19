@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import { Categories, Mentors, Projects, Students, StudentsTeams, Teams } from "../../models/models";
 
 interface IProject {
@@ -107,8 +108,76 @@ export default class ProjectService {
         })
     }
 
+    async getProjectByMentorName(name: string) {
+        return Projects.findAll({
+            attributes: {
+                exclude: ['id_team']
+            },
+            where: {
+                '$Team.Mentor.mentor_fullName$': {
+                    [Op.substring]: name
+                }
+            },
+            include: [{
+                model: Teams,
+                foreignKey: 'id_team',
+                attributes: {
+                    exclude: ['id_team']
+                },
+                include: [{
+                    model: Mentors,
+                    foreignKey: 'id_mentor',
+                }, {
+                    model: Students,
+                    through: {
+                        attributes: {
+                            exclude: ['id_student', 'id_team']
+                        }
+                    }
+                }]
+            }, {
+                model: Categories,
+                foreignKey: 'id_category',
+            }],
+        })
+    }
+
+    async getAllProjectsByCategory(category: string) {
+        return Projects.findAll({
+            attributes: {
+                exclude: ['id_team']
+            },
+            where: {
+                "$Team.Categories.category_name$": {
+                    [Op.substring]: category
+                }
+            },
+            include: [{
+                model: Teams,
+                foreignKey: 'id_team',
+                attributes: {
+                    exclude: ['id_team']
+                },
+                include: [{
+                    model: Mentors,
+                    foreignKey: 'id_mentor',
+                }, {
+                    model: Students,
+                    through: {
+                        attributes: {
+                            exclude: ['id_student', 'id_team']
+                        }
+                    }
+                }]
+            }, {
+                model: Categories,
+                foreignKey: 'id_category',
+            }],
+        })
+    }
+
     async createProject(project: IProject) {
-        
+        Projects.create(project)
     }
 
     async deleteProject(id: number) {

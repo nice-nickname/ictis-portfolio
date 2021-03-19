@@ -13,7 +13,7 @@ class MentorController {
     async getById(req: Request, res: Response, next: NextFunction) {
         let id = parseInt(req.params.id)
         if (isNaN(id)) {
-            next()
+            next(new Error('id equals NaN'))
         }
         else {
             let qres = await service.getMentorById(id)

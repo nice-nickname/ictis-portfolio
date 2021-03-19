@@ -10,7 +10,7 @@ const router = Router()
 router
     .get('/', Action(controller.getAll))
     .get('/:id', Action(controller.getById))
-    .get('/:name', Action(controller.getByName))
+    .get('/name/:name', Action(controller.getByName))
     .post('/', Action(controller.postMentor))
     .delete('/:id', Action(controller.deleteMentor))
     
