@@ -1,6 +1,7 @@
 import { Router } from "express";
-import controller from "../../controllers/userControllers/StudentController";
+import { StudentController as controller } from "../../controllers/controllers";
 import { Action } from "../../lib";
+
 const router = Router()
 
 // ================

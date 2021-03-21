@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import { Teams, Mentors, Students, StudentsTeams } from "../../models/models";
 
 interface ITeam {
@@ -31,6 +32,52 @@ export default class TeamService {
         return Teams.findOne({
             where: {
                 id_team: id
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
+    }
+
+    async getTeamByName(name: string) {
+        return Teams.findAll({
+            where: {
+                team_name: {
+                    [Op.substring]: name
+                }
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
+    }
+
+    async getTeamByMentorName(name: string) {
+        return Teams.findAll({
+            where: {
+                "$Mentor.mentor_fullName$": {
+                    [Op.substring]: name
+                }
             },
             include: [{
                 model: Mentors,
