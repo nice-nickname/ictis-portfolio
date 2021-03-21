@@ -22,29 +22,33 @@ class ProjectController {
         res.status(200).json()
     }
 
-    async getByProjectName(req: Request, res: Response, next: NextFunction) {
-        let name = req.params.name
-
-    }
+    // async getByProjectName(req: Request, res: Response, next: NextFunction) {
+    //     let name = req.params.name
+        
+    // }
 
     async getByCategory(req: Request, res: Response, next: NextFunction) {
-
+        let name = req.params.name
+        let qres = await service.getAllProjectsByCategory(name)
+        res.json(qres.map(i => i.toJSON()))
     }
 
-    async getByMentor(req: Request, res: Response, next: NextFunction) {
-
-    }
-
-    async getByTeamName(req: Request, res: Response, next: NextFunction) {
-
+    async getByMentorName(req: Request, res: Response, next: NextFunction) {
+        let name = req.params.name
+        let qres = await service.getProjectByMentorName(name)
+        res.json(qres.map(i => i.toJSON()))
     }
 
     async createProject(req: Request, res: Response, next: NextFunction) {
-
+        let project = req.body.project
+        service.createProject(project)
+        res.sendStatus(200)
     }
 
     async deleteById(req: Request, res: Response, next: NextFunction) {
-
+        let id = Number(req.params.id)
+        service.deleteProject(id)
+        res.sendStatus(200)
     }
 }
 
