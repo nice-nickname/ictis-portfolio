@@ -50,7 +50,7 @@ export default class ProjectService {
                 exclude: ['id_project'],
             },
             where: {
-                id_course: course
+                project_course: course
             },
             include: [{
                 model: Teams,

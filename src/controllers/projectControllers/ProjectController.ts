@@ -19,7 +19,7 @@ class ProjectController {
     async getById(req: Request, res: Response, next: NextFunction) {
         let id = Number(req.params.id)
         let qres = await service.getProjectById(id)
-        res.status(200).json()
+        res.status(200).json(qres?.toJSON())
     }
 
     // async getByProjectName(req: Request, res: Response, next: NextFunction) {
