@@ -148,7 +148,7 @@ export default class ProjectService {
                 exclude: ['id_team']
             },
             where: {
-                "$Team.Categories.category_name$": {
+                "$Category.category_name$": {
                     [Op.substring]: category
                 }
             },
