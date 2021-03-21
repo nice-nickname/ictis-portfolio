@@ -10,5 +10,11 @@ const router = Router()
 
 router
     .get('/', Action(controller.getAll))
-    
+    .get('/:id', Action(controller.getById))
+    .get('/course/:course', Action(controller.getByCourse))
+    .get('/category/:name', Action(controller.getByCategory))
+    .get('/mentor/:name', Action(controller.getByMentorName))
+    .post('/', Action(controller.createProject))    
+    .delete('/:id', Action(controller.deleteById))
+
 export default router
