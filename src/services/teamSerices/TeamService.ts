@@ -1,16 +1,101 @@
+import { Op } from "sequelize";
 import { Teams, Mentors, Students, StudentsTeams } from "../../models/models";
+
+interface ITeam {
+    team_name: string,
+    id_mentor: number,
+    ids_students: number[],
+    students_roles: string[]
+}
 
 export default class TeamService {
 
     async getAllTeams() {
-
+        return Teams.findAll({
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
     }
 
     async getTeamById(id: number) {
-
+        return Teams.findOne({
+            where: {
+                id_team: id
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
     }
 
-    async createTeam(team: {team_name: string, id_mentor: number, ids_students: number[], students_roles: string[]}) {
+    async getTeamByName(name: string) {
+        return Teams.findAll({
+            where: {
+                team_name: {
+                    [Op.substring]: name
+                }
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
+    }
+
+    async getTeamByMentorName(name: string) {
+        return Teams.findAll({
+            where: {
+                "$Mentor.mentor_fullName$": {
+                    [Op.substring]: name
+                }
+            },
+            include: [{
+                model: Mentors,
+                attributes: {
+                    exclude: ['id_mentor']
+                }
+            }, {
+                model: Students,
+                through: {
+                    attributes: {
+                        exclude: ['id_student', 'id_team']
+                    }
+                }
+            }]
+        })
+    }
+
+    async createTeam(team: ITeam) {
 
         let newTeam = await Teams.create({
             id_mentor: team.id_mentor,
@@ -31,6 +116,10 @@ export default class TeamService {
     }
 
     async deleteTeam(id: number) {
-
+        Teams.destroy({
+            where: {
+                id_team: id
+            }
+        })
     }
 }

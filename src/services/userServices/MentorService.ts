@@ -1,14 +1,16 @@
 import { Op } from "sequelize";
 import { Mentors } from "../../models/models";
 
+interface IMentor {
+    mentor_fullName: string, 
+    mentor_info: string, 
+    mentor_email: string
+}
+
 export default class MentorService {
 
     async getAllMentors() {
-        return Mentors.findAll({
-            attributes: {
-                exclude: ['id_mentor']
-            }
-        })
+        return Mentors.findAll()
     }
 
     async getMentorById(id: number) {
@@ -29,9 +31,9 @@ export default class MentorService {
         })
     }
 
-    async createMentor(mentor: {mentor_fullName: string, mentor_info: string}) {
+    async createMentor(mentor: IMentor) {
         let ment = await Mentors.create(mentor)
-        return ment.get('id_mentor')
+        return Number(ment.get('id_mentor'))
     }
 
     async deleteMentor(id: number) {

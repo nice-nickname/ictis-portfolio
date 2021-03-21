@@ -1,18 +1,19 @@
 import { Router } from "express";
-import { MentorController as controller } from "../../controllers/controllers";
+import { TeamController as controller } from "../../controllers/controllers";
 import { Action } from "../../lib";
 
 const router = Router()
 
 // ================
-// URL/api/students
+// URL/api/projects
 // ================
 
 router
     .get('/', Action(controller.getAll))
     .get('/:id', Action(controller.getById))
     .get('/name/:name', Action(controller.getByName))
-    .post('/', Action(controller.postMentor))
-    .delete('/:id', Action(controller.deleteMentor))
+    .get('/mentor/:name', Action(controller.getByMentorName))
+    .post('/', Action(controller.postTeam))
+    .delete('/:id', Action(controller.deleteById))
     
 export default router

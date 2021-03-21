@@ -1,13 +1,15 @@
 import { Students } from "../../models/models";
 
+interface IStudent {
+    student_fullName: string,
+    student_email: string,
+    student_year: string
+}
+
 export default class StudentService {
 
     async getAllStudents() {
-        return Students.findAll({
-            attributes: {
-                exclude: ['id_student']
-            }
-        })
+        return Students.findAll()
     }
 
     async getStudentById(id: number) {
@@ -18,7 +20,7 @@ export default class StudentService {
         })
     }
 
-    async createStudent(student: {student_fullName: string, student_direction: string}) {
+    async createStudent(student: IStudent) {
         let stud = await Students.create(student)
         return Number(stud.get('id_student'))
     }

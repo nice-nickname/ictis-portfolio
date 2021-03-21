@@ -12,8 +12,12 @@ Students.init({
     student_fullName: {
         type: Sequelize.STRING(100)
     },
-    student_direction: {
-        type: Sequelize.STRING(100)
+    student_email: {
+        type: Sequelize.STRING(100),
+        allowNull: true,
+    },
+    student_year: {
+        type: Sequelize.STRING(10)
     }
 }, {
     sequelize,
