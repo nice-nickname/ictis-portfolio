@@ -11,6 +11,7 @@ dotenv.config()
 import routes from "./src/routes/routes";
 import { middlewares, passport } from "./src/lib/index"
 import fs from "fs"
+import path from "path"
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
@@ -26,9 +27,10 @@ app.use(passport.session())
 app.use(express.static(__dirname + '/public/test'))
 app.use('/api', routes)
 
+
 const httpsOptions = {
-    cert: fs.readFileSync(String(process.env.HTTPS_KEY)),
-    key: fs.readFileSync(String(process.env.HTTPS_CERT)),
+    cert: fs.readFileSync(path.join(__dirname, '..', 'server.crt')),
+    key: fs.readFileSync(path.join(__dirname, '..', 'server.key')),
 }
 
 https.createServer(httpsOptions, app)
