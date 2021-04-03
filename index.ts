@@ -29,8 +29,8 @@ app.use('/api', routes)
 
 
 const httpsOptions = {
-    cert: fs.readFileSync(path.join(__dirname, '..', 'server.crt')),
-    key: fs.readFileSync(path.join(__dirname, '..', 'server.key')),
+    cert: fs.readFileSync(path.join(String(process.env.HOME_DIR), '..', 'server.crt')),
+    key: fs.readFileSync(path.join(String(process.env.HOME_DIR), '..', 'server.key')),
 }
 
 https.createServer(httpsOptions, app)
