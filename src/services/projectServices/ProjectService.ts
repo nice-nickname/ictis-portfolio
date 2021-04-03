@@ -7,6 +7,7 @@ interface IProject {
     project_info: string,
     project_name: string,
     project_course: number,
+    project_mark: number
 }
 
 export default class ProjectService {
