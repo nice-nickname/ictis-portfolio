@@ -21,7 +21,7 @@ app.use(middlewares.enableCors)
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public/test'))
 app.use('/api', routes)
 
 
