@@ -23,6 +23,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(express.static(String(process.env.HOME_DIR) + '/public/test'))
+app.use(express.static(String(process.env.HOME_DIR) + '/public/debug'))
 app.use('/api', routes)
 
 const httpsOptions = {
