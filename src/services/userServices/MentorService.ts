@@ -4,7 +4,8 @@ import { Mentors } from "../../models/models";
 interface IMentor {
     mentor_fullName: string, 
     mentor_info: string, 
-    mentor_email: string
+    mentor_email: string,
+    mentor_picture: string
 }
 
 export default class MentorService {
@@ -42,5 +43,9 @@ export default class MentorService {
                 id_mentor: id
             }
         })
+    }
+
+    uploadPicture() {
+
     }
 }
