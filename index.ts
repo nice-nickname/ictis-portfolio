@@ -1,7 +1,6 @@
 import fs from "fs"
 import path from "path"
 import https from "https"
-import multer from "multer"
 import dotenv from "dotenv"
 import express from "express"
 import bodyParser from "body-parser"
@@ -25,7 +24,6 @@ app.use(passport.session())
 
 app.use(express.static(String(process.env.HOME_DIR) + '/public/test'))
 app.use('/api', routes)
-
 
 const httpsOptions = {
     cert: fs.readFileSync(path.join(String(process.env.HTTPS_DIR), 'server.crt')),
