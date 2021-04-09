@@ -15,7 +15,7 @@ Teams.init({
             model: 'Mentors',
             key: 'id_mentor'
         },
-        onDelete: 'CASCADE'
+        onDelete: 'SET NULL'
     },
     team_name: {
         type: Sequelize.STRING(100)

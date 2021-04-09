@@ -27,7 +27,21 @@ class MentorController {
     }
 
     async postMentor(req: Request, res: Response, next: NextFunction) {
-        service.createMentor(req.body.mentor)
+        let mentor = req.body.mentor
+        
+        let name = mentor.mentor_fullName
+        let info = mentor.mentor_info
+        let pic = ""
+        let email = mentor.mentor_email
+
+        /* Enter file uploading here */
+
+        service.createMentor({
+            mentor_fullName: name,
+            mentor_email: email,
+            mentor_info: info,
+            mentor_picture: pic
+        })
         res.sendStatus(200)
     }
 
