@@ -33,6 +33,13 @@ Projects.init({
             min: 1
         }
     },
+    project_mark: {
+        type: Sequelize.INTEGER,
+        validate: {
+            min: 0,
+            max: 100
+        }
+    },
     id_category: {
         type: Sequelize.INTEGER,
         references: {
