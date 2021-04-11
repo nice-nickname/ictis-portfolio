@@ -8,7 +8,9 @@ const storage = multer.diskStorage({
         cb(null, path.join(String(process.env.HOME_DIR), String(process.env.IMG_REL_DIR)))
     },
     filename: (req, file, cb) => {
-        let name = getRandomPictureName() + '.png'
+        let type = file.mimetype.split('/').pop()
+        console.log(type)
+        let name = getRandomPictureName() + '.' + type
         cb(null, name)
     }
 })

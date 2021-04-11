@@ -1,4 +1,5 @@
 import { Op } from "sequelize";
+import { deleteMentorPictureByName } from "../../lib/utils/utils";
 import { Mentors } from "../../models/models";
 
 interface IMentor {
@@ -38,14 +39,14 @@ export default class MentorService {
     }
 
     async deleteMentor(id: number) {
-        Mentors.destroy({
-            where: {
-                id_mentor: id
-            }
-        })
-    }
-
-    uploadPicture() {
-
+        let mentor = await this.getMentorById(id)
+        if (mentor) {
+            deleteMentorPictureByName(mentor.get('mentor_picture') as string)
+            Mentors.destroy({
+                where: {
+                    id_mentor: id
+                }
+            })
+        }
     }
 }
