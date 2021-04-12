@@ -2,6 +2,7 @@ import fs from "fs"
 import path from "path"
 
 const chars = "abcdefghjklmnopqrstuvwxyz1234567890!@#$%^&*()_=-+"
+
 const maxNameLength = 10
 const pictureDir = path.join(String(process.env.HOME_DIR), String(process.env.IMG_REL_DIR))
 
