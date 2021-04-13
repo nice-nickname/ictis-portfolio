@@ -22,7 +22,7 @@ Mentors.init({
         }
     },
     mentor_picture: {
-        type: Sequelize.STRING(10),
+        type: Sequelize.STRING(50),
     }
 }, {
     sequelize,
