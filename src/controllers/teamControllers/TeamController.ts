@@ -1,6 +1,4 @@
-import { ESTALE } from "constants";
 import { NextFunction, Request, Response } from "express";
-import { isNull } from "sql-bricks";
 import { TeamService } from "../../services/services";
 
 const service = new TeamService()
@@ -36,9 +34,19 @@ class TeamController {
     }
 
     async postTeam(req: Request, res: Response, next: NextFunction) {
-        let team = req.body.team
-        service.createTeam(team)
-        res.sendStatus(200)
+        let team = JSON.parse(req.body.team)
+        let picname = "";
+        if (req.file) {
+            picname = req.file.filename
+        }
+        service.createTeam({
+            team_name: team.team_name,
+            team_picture: team.team_picture,
+            id_mentor: team.id_mentor,
+            ids_students: team.ids_students,
+            students_roles: team.students_roles
+        })
+        res.send(req.file.filename)
     }
 
     async deleteById(req: Request, res: Response, next: NextFunction) {

@@ -1,5 +1,5 @@
 import ProjectService from "./projectServices/ProjectService"
-import TeamService from "./teamSerices/TeamService"
+import TeamService from "./teamServices/TeamService"
 import MentorService from "./userServices/MentorService"
 import StudentService from "./userServices/StudentService"
 

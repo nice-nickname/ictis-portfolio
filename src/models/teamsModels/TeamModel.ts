@@ -20,6 +20,9 @@ Teams.init({
     team_name: {
         type: Sequelize.STRING(100)
     },
+    team_picture: {
+        type: Sequelize.STRING(50)
+    }
 }, {
     sequelize,
     timestamps: false,

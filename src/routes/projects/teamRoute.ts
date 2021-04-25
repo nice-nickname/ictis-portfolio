@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { TeamController as controller } from "../../controllers/controllers";
-import { Action } from "../../lib";
+import { Action, middlewares } from "../../lib";
 
 const router = Router()
 
@@ -13,7 +13,7 @@ router
     .get('/:id', Action(controller.getById))
     .get('/name/:name', Action(controller.getByName))
     .get('/mentor/:name', Action(controller.getByMentorName))
-    .post('/', Action(controller.postTeam))
+    .post('/', middlewares.fileUpload.single('image'), Action(controller.postTeam))
     .delete('/:id', Action(controller.deleteById))
     
 export default router
