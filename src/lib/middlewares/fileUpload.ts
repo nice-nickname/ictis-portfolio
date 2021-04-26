@@ -9,7 +9,6 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         let type = file.mimetype.split('/').pop()
-        console.log(type)
         let name = getRandomPictureName() + '.' + type
         cb(null, name)
     }

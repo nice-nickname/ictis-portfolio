@@ -97,7 +97,6 @@ export default class TeamService {
     }
 
     async createTeam(team: ITeam) {
-
         let newTeam = await Teams.create({
             id_mentor: team.id_mentor,
             team_name: team.team_name,

@@ -9,7 +9,6 @@ const pictureDir = path.join(String(process.env.HOME_DIR), String(process.env.IM
 
 function getRandomPictureName() {
     let dateStr = new Date().toLocaleString()
-    console.log(dateStr)
     let h = crypto.createHash('md5').update('picture' + dateStr).digest('hex')
     console.log(h)
     return h

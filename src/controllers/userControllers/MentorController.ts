@@ -29,7 +29,6 @@ class MentorController {
     async postMentor(req: Request, res: Response, next: NextFunction) {
         // Using JSON.parse because body-parser doesn't work with multer fileupload
         // So req.body.mentor is needed to be string in DataForm, who needs to be sended from site
-
         let mentor = JSON.parse(req.body.mentor)
         
         let name = mentor.mentor_fullName
