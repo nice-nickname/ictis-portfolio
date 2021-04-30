@@ -1,0 +1,3 @@
+[submodule "public/repo"]
+	path = public/repo
+	url = https://github.com/Vladlen-Safin/test1.git
