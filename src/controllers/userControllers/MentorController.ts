@@ -39,6 +39,8 @@ class MentorController {
         let name = mentor.mentor_fullName
         let info = mentor.mentor_info
         let email = mentor.mentor_email
+        let phone = mentor.mentor_phone
+        let link = mentor.mentor_link
         let pic = ""
 
         if (req.file) {
@@ -49,7 +51,9 @@ class MentorController {
             mentor_fullName: name,
             mentor_email: email,
             mentor_info: info,
-            mentor_picture: pic
+            mentor_picture: pic,
+            mentor_link: link,
+            mentor_phone: phone
         })
         res.sendStatus(200)
     }

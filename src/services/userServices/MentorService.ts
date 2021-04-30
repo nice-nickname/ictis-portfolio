@@ -6,7 +6,9 @@ interface IMentor {
     mentor_fullName: string, 
     mentor_info: string, 
     mentor_email: string,
-    mentor_picture: string
+    mentor_picture: string,
+    mentor_link: string,
+    mentor_phone: string
 }
 
 export default class MentorService {
