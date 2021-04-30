@@ -27,7 +27,25 @@ class MentorController {
     }
 
     async postMentor(req: Request, res: Response, next: NextFunction) {
-        service.createMentor(req.body.mentor)
+        // Using JSON.parse because body-parser doesn't work with multer fileupload
+        // So req.body.mentor is needed to be string in DataForm, who needs to be sended from site
+        let mentor = JSON.parse(req.body.mentor)
+        
+        let name = mentor.mentor_fullName
+        let info = mentor.mentor_info
+        let email = mentor.mentor_email
+        let pic = ""
+
+        if (req.file) {
+            pic = req.file.filename
+        }
+
+        service.createMentor({
+            mentor_fullName: name,
+            mentor_email: email,
+            mentor_info: info,
+            mentor_picture: pic
+        })
         res.sendStatus(200)
     }
 

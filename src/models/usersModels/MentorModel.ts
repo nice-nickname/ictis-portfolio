@@ -20,6 +20,9 @@ Mentors.init({
         validate: {
             isEmail: true
         }
+    },
+    mentor_picture: {
+        type: Sequelize.STRING(50),
     }
 }, {
     sequelize,

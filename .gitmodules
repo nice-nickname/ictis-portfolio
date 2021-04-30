@@ -1,3 +1,3 @@
-[submodule "public/test"]
-	path = public/test
-	url = https://github.com/Vladlen-Safin/test.git
+[submodule "public/repo"]
+	path = public/repo
+	url = https://github.com/Vladlen-Safin/test1.git

@@ -4,12 +4,15 @@ import * as authMethods from "./auth/methods";
 
 import enableCors from "./middlewares/cors";
 import session from "./middlewares/session";
+import fileUpload from "./middlewares/fileUpload";
 import isAuthenticated from "./middlewares/authenticated";
+
 
 const middlewares = {
     enableCors,
     session,
-    isAuthenticated
+    isAuthenticated,
+    fileUpload
 }
 
 export {
