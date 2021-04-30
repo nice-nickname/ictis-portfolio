@@ -27,7 +27,12 @@ function deleteMentorPictureByName(name: string) {
     })
 }
 
+function getImageDir() {
+    return 'https://localhost:3000';
+}
+
 export {
     getRandomPictureName,
-    deleteMentorPictureByName
+    deleteMentorPictureByName,
+    getImageDir
 }

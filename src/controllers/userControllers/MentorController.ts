@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import { getImageDir } from "../../lib/utils/utils";
 import { MentorService } from "../../services/services";
 
 const service = new MentorService()
@@ -17,7 +18,11 @@ class MentorController {
         }
         else {
             let qres = await service.getMentorById(id)
-            res.status(200).json(qres?.toJSON())
+            res.render('mentor', {
+                mentor: qres?.toJSON(),
+                imageDir: getImageDir()
+            })
+            // res.status(200).json(qres?.toJSON())
         }
     }
 

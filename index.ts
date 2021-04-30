@@ -22,8 +22,18 @@ app.use(middlewares.enableCors)
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.set('view engine', 'ejs')
+app.set('views', path.join(process.env.HOME_DIR as string, '/public/views'))
+
+// app.use(express.static(String(process.env.HOME_DIR) + '/public/images'))
+// app.use(express.static(String(process.env.HOME_DIR) + '/public/repo'))
+// app.use(express.static(String(process.env.HOME_DIR) + '/public/debug'))
+
+app.use(express.static(process.env.HOME_DIR as string + '/public/images'))
 app.use(express.static(String(process.env.HOME_DIR) + '/public/repo'))
 app.use(express.static(String(process.env.HOME_DIR) + '/public/debug'))
+
+
 app.use('/api', routes)
 
 const httpsOptions = {
