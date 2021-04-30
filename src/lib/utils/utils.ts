@@ -27,12 +27,12 @@ function deleteMentorPictureByName(name: string) {
     })
 }
 
-function getImageDir() {
-    return 'https://localhost:3000';
+function getPublicDir() {
+    return `${process.env.HOST}:${process.env.PORT}`;
 }
 
 export {
     getRandomPictureName,
     deleteMentorPictureByName,
-    getImageDir
+    getPublicDir
 }

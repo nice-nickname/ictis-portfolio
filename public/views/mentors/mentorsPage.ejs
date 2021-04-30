@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('../util-parts/head', {
+    publicDir: publicDir
+}) %> 
+
+<body>
+    <div class="page">
+        
+        <header>
+
+            <%- include('../util-parts/menu', {
+                publicDir: publicDir
+            }) %> 
+
+            <%- include('../util-parts/hamburgerMenu', {
+                publicDir: publicDir
+            }) %> 
+            
+        </header>
+
+        <div class="nas">
+            <div class="nas_back">
+                <div class="blabla">
+                    <div class="NAS_P">
+                        <form>
+                            <input type="search" name="Q" placeholder="  Введите имя или фамилию Наставника" class="NAS_P_in">
+                        </form>
+                    </div>
+
+                    <%- include('mentorsGroup', {
+                        mentors: mentors,
+                        publicDir: publicDir
+                    }) %> 
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer nas_footer">
+            <ul>
+                <li>
+                    <p class="footer_contacts">Телефоны:<br /> +7 (905) 459-21-58<br /> +7(863) 218-40-00 <br /> +7(8634) 68-08-90 <br />доб. 30106 <br />E-Mail: proictis@gmail.com</p>
+                </li>
+                <li>
+                    <a href="team.html"><img src="img/5mgnZA3Dn60.jpg" class="footer_img"></a>
+                </li>
+                <li>
+                    <img src="img/SFEDU.jpg" class="footer_img">
+                </li>
+                <li>
+                    <img src="img/SFEDU.jpg" class="footer_img">
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
