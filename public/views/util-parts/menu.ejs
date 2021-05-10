@@ -1,8 +1,18 @@
-<ul class="menu">
-    <li class="menu_li menu_li_img"><a href="index.html"><img src="<%= `${publicDir}/img/LOGONAH 1.png` %> " class="li_img"></a></li>
-    <li class="menu_li"><a href="nastavniki.html">Наставники</a></li>
-    <li class="menu_li"><a href="table.html">Записаться на проект</a></li>
-    <li class="menu_li"><a href="first1.html">Портфолию проектов </a></li>
-    <li class="menu_li"><a href="FAQ.html">FAQ</a></li>
-    <li class="menu_li"><a href="lichka.html">Вход</a></li>
-</ul>
+<div class="menu">
+    <ul class="menu_ul">
+        <li class="menu_li menu_logo">
+            <a href="/index.html">
+                <img src="<%= `/img/LOGONAH 1.png` %> " class="li_img">
+             </a>
+        </li>
+        <li class="menu_li"><a href="nastavniki.html">Наставники</a></li>
+        <li class="menu_li"><a href="table.html">Записаться на проект</a></li>
+        <li class="menu_li"><a href="first1.html">Портфолию проектов </a></li>
+        <li class="menu_li"><a href="FAQ.html">FAQ</a></li>
+        <% if (user) { %>
+            <li class="menu_li"><a href=""><%= user.name %> </a></li>
+        <% } else { %>
+            <li class="menu_li"><a href="/api/auth/redirect">Вход в личный кабинет</a></li>
+        <% } %>
+    </ul> 
+</div>

@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { getPublicDir } from "../../lib/utils/utils";
+import { Mentors } from "../../models/models";
 import { MentorService } from "../../services/services";
 
 const service = new MentorService()
@@ -7,11 +8,19 @@ const service = new MentorService()
 class MentorController {
 
     async getAll(req: Request, res: Response, next: NextFunction) {
-        let qres = await service.getAllMentors()
+
+        let qres: Mentors[]
+        if (req.query.query) {
+            qres = await service.getMentorByName(req.query.query as string)
+        }
+        else {
+            qres = await service.getAllMentors()
+        }
+
         // res.status(200).json(qres.map(i => i.toJSON()))
         res.render('mentors/mentorsPage', {
             mentors: qres.map(i => i.toJSON()),
-            publicDir: getPublicDir()
+            user: req.user
         })
     }
 

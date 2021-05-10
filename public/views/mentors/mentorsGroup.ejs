@@ -1,8 +1,8 @@
+<!-- Убрать margin у элементов списка и сделать justify-content  -->
 <ul class="nas_ul">
     <% mentors.forEach(m => { %>
         <%- include('singleMentor', {
             mentor: m,
-            publicDir: publicDir
         }) %> 
     <% }) %>
 </ul>

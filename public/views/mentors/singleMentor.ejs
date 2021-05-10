@@ -1,15 +1,33 @@
-
+<!--  Сделать выравнимание картинки с помощью <p> text-allign: center  -->
 <li class="nas_li">
-    <ul class="nas_li_ul">
-        <li>
-            <img class="nas_F" src="<%= `${publicDir}/${mentor.mentor_picture}` %> ">
-        </li>
-        <li>
-            <a href="<%= `mentors/${mentor.id_mentor}` %> " style="text-decoration: none;">
-                <p class="nas_name"> <%= mentor.mentor_fullName %> </p>
-            </a>
-            <p class="nas_opisanie"> <%= mentor.mentor_info %> </p>
-            <p class="nas_kontact">тел.: <%= mentor.mentor_phone %><br /><br /><%= mentor.mentor_email %> <br /><br />соц. сеть ВК: <%= mentor.mentor_link %><br /><br /></p>
-        </li>
-    </ul>
+    <div class="nas_li__element">
+        <ul class="nas_li_ul">
+            <li>
+                <p style="text-align: center;">
+                    <% if (mentor.mentor_picture) { %>
+                        <img class="nas_F" src="<%= `/${mentor.mentor_picture}` %>">
+                    <% } else { %>
+                        <img class="nas_F" src="/default.jpg">
+                    <% } %> 
+                </p>
+            </li>
+            <li>
+                <a href="<%= `mentors/${mentor.id_mentor}` %> " style="text-decoration: none;">
+                    <p class="nas_name"> <%= mentor.mentor_fullName %> </p>
+                </a>
+                <p class="nas_opisanie"> <%= mentor.mentor_info %> </p>
+                <div class="nas_kontact">
+                    <p class="nas_kontact__item">
+                        тел.: <%= mentor.mentor_phone %>
+                    </p>
+                    <p class="nas_kontact__item">
+                        <%= mentor.mentor_email %>
+                    </p>
+                    <p class="nas_kontact__item">
+                        соц. сеть ВК: <%= mentor.mentor_link %>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
 </li>

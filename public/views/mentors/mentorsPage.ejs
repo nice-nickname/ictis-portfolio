@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+<!--Поправить поле ввода, градиент...-->
+<!--
 
-<%- include('../util-parts/head', {
-    publicDir: publicDir
-}) %> 
+    Отличие от изначальной страницы: 
+        список наставников сделан с помощью display: inline-block без флексов
+        Добавлен элемент nas_li__element, у которого ширина = 33% от родительского блока,
+        а внутренний элемент имеет ширину = 100% от nas_li__element и макс. ширину = 300px
+        Градиент поправлен следующим образом: у nas_back = белый цвет фона, у nas_back::before фон - полупрозрачная картинка
+        а у blabla фон = градиент
+
+-->
+<%- include('../util-parts/head', {}) %> 
 
 <body>
     <div class="page">
@@ -11,13 +19,13 @@
         <header>
 
             <%- include('../util-parts/menu', {
-                publicDir: publicDir
+                activeElement: 1
             }) %> 
 
-            <%- include('../util-parts/hamburgerMenu', {
-                publicDir: publicDir
-            }) %> 
+            <%- include('../util-parts/hamburgerMenu', {}) %> 
             
+            <link rel="stylesheet" href="/mentors.css">
+
         </header>
 
         <div class="nas">
@@ -25,36 +33,25 @@
                 <div class="blabla">
                     <div class="NAS_P">
                         <form>
-                            <input type="search" name="Q" placeholder="  Введите имя или фамилию Наставника" class="NAS_P_in">
+                            <input type="search" name="query" placeholder="Введите имя или фамилию Наставника" class="NAS_P_in">
+                            <img src="/search-solid.svg" />
                         </form>
                     </div>
 
                     <%- include('mentorsGroup', {
-                        mentors: mentors,
-                        publicDir: publicDir
+                        mentors: mentors
                     }) %> 
                     
                 </div>
             </div>
         </div>
 
-        <footer class="footer nas_footer">
-            <ul>
-                <li>
-                    <p class="footer_contacts">Телефоны:<br /> +7 (905) 459-21-58<br /> +7(863) 218-40-00 <br /> +7(8634) 68-08-90 <br />доб. 30106 <br />E-Mail: proictis@gmail.com</p>
-                </li>
-                <li>
-                    <a href="team.html"><img src="<%= `${publicDir}/img/5mgnZA3Dn60.jpg` %>" class="footer_img"></a>
-                </li>
-                <li>
-                    <img src=<%= `${publicDir}/img/SFEDU.jpg` %> class="footer_img">
-                </li>
-                <li>
-                    <img src="<%= `${publicDir}/img/SFEDU.jpg` %>" class="footer_img">
-                </li>
-            </ul>
-        </footer>
+        <%- include('../util-parts/footer', {}) %> 
     </div>
 </body>
+
+<script>
+    setActiveMenuElement(1)
+</script>
 
 </html>
