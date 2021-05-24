@@ -1,0 +1,14 @@
+<% for( let i = 0; i < mentors.length; i += 3 ) { %>
+
+    <ul class="nas_ul">
+    
+        <% for( let j = 0; j < 3 && i + j < mentors.length; j++ ) { %>
+            <% let index = i + j %> 
+            <%- include('./mentor', {
+                mentor: mentors[index]
+            }) %> 
+        <% } %>
+    
+    </ul>
+
+<% } %>

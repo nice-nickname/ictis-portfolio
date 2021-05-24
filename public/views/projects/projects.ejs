@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+<%- include('../util-parts/head', {
+    
+}) %>
+
+<body>
+    <div class="page">
+    <header>
+
+        <%- include('../util-parts/menu', {
+            user: user,
+            activeElement: 3
+        }) %>
+        
+        <%- include('../util-parts/hamburgerMenu', {
+            user: user
+        }) %>
+    
+    </header>
+        <div class="portfolio_con">
+            <div class="portfolio_con_back">
+                <!--<form class="portfolio_form">
+                    <input type="search" name="Q" placeholder="  Введите имя или фамилию Наставника" class="NAS_P_in">
+                </form>-->
+                <div class="NAS_P portfolio_form">
+                    <form id="project_filter">
+                        <!--<input type="search" name="Q" placeholder="  Введите имя или фамилию Наставника" class="NAS_P_in">-->
+                        <input type="text" name="q" placeholder="Введите название проекта">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+
+                <select class="portfolio_select" name="course" form="project_filter">
+                    <option value="">Все</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    
+                </select>
+                
+                <select name="mentor" form="project_filter">
+                    <option value="">Наставник</option>
+                    <% for( let i = 0; i < mentors.length; i++ ) { %>
+                        <option value="<%= mentors[i].id_mentor %>">
+                            <%= mentors[i].mentor_fullName %> 
+                        </option>
+                    <% } %>
+                </select>
+
+                <select name="category" form="project_filter">
+                    <option value="">Категории</option>
+                    <% for( let i = 0; i < categories.length; i++ ) { %>
+                        <option value="<%= categories[i].id_category %>">
+                            <%= categories[i].category_name %> 
+                        </option>
+                    <% } %>
+                </select>
+                
+                <div class="portfolio_spisok">
+
+                    <%- include('./projectTrios', {
+                        projects: projects
+                    }) %>
+
+                </div>
+            </div>
+        </div>
+    
+    <%- include('../util-parts/footer', {
+
+    }) %> 
+
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('../util-parts/head', {
+
+}) %> 
+
+<body>
+    <div class="page">
+        <header>
+            
+            <%- include('../util-parts/menu', {
+                user: user,
+                activeElement: 1
+            }) %>
+
+            <%- include('../util-parts/hamburgerMenu', {
+                user: user
+            }) %>
+
+        </header>
+
+        <div class="nas_table">
+            <div class="nas_table_fon">
+                <div class="nas_lich_table">
+                    <div class="nas_lich_first_col">
+                        <div class="nas_lich_photo">
+                            <img src="/<%= mentor.mentor_picture %> " alt="" class="nas_lich_photo_img">
+                        </div>
+                        <p class="nas_lich_hello">
+                            <% let name = mentor.mentor_fullName.split(' ')[1] %> 
+                            Здравстуйте!<br />
+                            Меня зовут <%= name %>.
+                        </p>
+                        <p class="nas_lich_opis">
+                            Провожу занятия по информатики со школьниками.<br />
+                            Область профессиональных интересов web разработка.
+                        </p>
+                        <div class="nas_lich_con_h_c">
+                            <div class="nas_lich_h">
+                                <img src="img/SFEDU.jpg" alt="" />
+                                <img src="img/SFEDU.jpg" alt="" />
+                                <img src="img/SFEDU.jpg" alt="" />
+                                <img src="img/SFEDU.jpg" alt="" />
+                            </div>
+                            <div class="nas_lich_c">
+                                <h3>Контакты</h3>
+                                <ul>
+                                    <li style="margin-top: 6px;"><%= mentor.mentor_phone %> </li>
+                                    <li style="margin-top: 6px;"><%= mentor.mentor_link %> </li>
+                                    <li style="margin-top: 6px;"><%= mentor.mentor_email %> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nas_lcih_second_col">
+                        <div class="nas_lich_name">
+                            <h2><%= mentor.mentor_fullName %> </h2>
+                            <p class="nas_lich_opis_name">
+                            </p>
+                        </div>
+                        <div class="nas_lich_projects">
+                            <p>Проекты</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="TEL">
+                    <div class="Tel_photo">
+                        <img src="/<%= mentor.mentor_picture %> " alt="">
+                    </div>
+                    <div class="Tel_name">
+                        <h2><%= mentor.mentor_fullName %> </h2>
+                    </div>
+                    <div class="Tel_ho_co">
+                        <div class="Tel_Hobby">
+                            <p>Мои хобби</p>
+                            <ul>
+                                <li>Так Так</li>
+                                <li>Так Так</li>
+                                <li>Так Так</li>
+                            </ul>
+                        </div>
+                        <div class="Tel_contacts">
+                            <p>Контакты</p>
+                            <ul>
+                                <%= mentor.mentor_phone %>
+                                <%= mentor.mentor_link %>
+                                <%= mentor.mentor_email %>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="Tel_js">
+                        <p>Проект:
+                            <script>
+                                var x = "Название проекта";
+                                document.write(x);
+                            </script>
+                        </p>
+                        <p>Команда:
+                            <script>
+                                var x = "Название команды";
+                                document.write(x);
+                            </script>
+                        </p>
+                    </div> -->
+                    <div class="Tel_js">
+                        <p>Проект:
+                            <script>
+                                var x = "Название проекта";
+                                document.write(x);
+                            </script>
+                        </p>
+                        <p>Команда:
+                            <script>
+                                var x = "Название команды";
+                                document.write(x);
+                            </script>
+                        </p>
+                    </div>
+                    <div class="Tel_js">
+                        <p>Проект:
+                            <script>
+                                var x = "Название проекта";
+                                document.write(x);
+                            </script>
+                        </p>
+                        <p>Команда:
+                            <script>
+                                var x = "Название команды";
+                                document.write(x);
+                            </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer nas_footer">
+            <ul>
+                <li>
+                    <!--<p class="footer_contacts">Телефоны:<br /> +7 (905) 459-21-58<br /> +7(863) 218-40-00 <br /> +7(8634) 68-08-90 <br />доб. 30106 <br />E-Mail: proictis@gmail.com</p>-->
+                    <p class="footer_contacts">E-Mail: proictis@gmail.com</p>
+                </li>
+                <li>
+                    <a href="team.html"><img src="img/5mgnZA3Dn60.jpg" class="footer_img"></a>
+                </li>
+                <li>
+                    <a href="https://sfedu.ru/"><img src="img/SFEDU.jpg" class="footer_img"></a>
+                </li>
+                <li>
+                    <a href="http://ictis.sfedu.ru/"><img src="img/ictisLogo.jpg" class="footer_img"></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body></html>

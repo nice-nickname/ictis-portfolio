@@ -1,18 +1,30 @@
-<div class="menu">
-    <ul class="menu_ul">
-        <li class="menu_li menu_logo">
-            <a href="/index.html">
-                <img src="<%= `/img/LOGONAH 1.png` %> " class="li_img">
-             </a>
-        </li>
-        <li class="menu_li"><a href="nastavniki.html">Наставники</a></li>
-        <li class="menu_li"><a href="table.html">Записаться на проект</a></li>
-        <li class="menu_li"><a href="first1.html">Портфолию проектов </a></li>
-        <li class="menu_li"><a href="FAQ.html">FAQ</a></li>
-        <% if (user) { %>
-            <li class="menu_li"><a href=""><%= user.name %> </a></li>
-        <% } else { %>
-            <li class="menu_li"><a href="/api/auth/redirect">Вход в личный кабинет</a></li>
-        <% } %>
-    </ul> 
-</div>
+
+<ul class="menu">
+    <li class="menu_li menu_li_img"><a href="/"><img src="img/LOGONAH 1.png" class="li_img"></a></li>
+    <li class="menu_li"><a href="/mentors">Наставники</a></li>
+    <li class="menu_li"><a href="/registration">Записаться на проект</a></li>
+    <li class="menu_li"><a href="/projects">Портфолию  проектов </a></li>
+    <li class="menu_li"><a href="/faq">FAQ</a></li>
+    <% if (user) { %>
+        <%  
+            let name = user.name
+            let names = name.split(' ')
+            let outName = ""
+            for (let i = 0; i < names.length; i++) {
+                const n = names[i];
+                if (i == 0) {
+                    outName += n + " "
+                }
+                else {
+                    outName += n[0] + ". "
+                }
+            }
+        %> 
+        <li class="menu_li" style="padding-left: 0;"><a href="/user"><%= outName %></a></li>
+    <% } else { %>
+        <li class="menu_li"><a href="/api/auth/redirect">Вход</a></li>
+    <% } %>
+</ul> 
+<script>
+    document.getElementsByClassName('menu_li').item(<%= activeElement %>).classList.add('menu_li_active')
+</script>

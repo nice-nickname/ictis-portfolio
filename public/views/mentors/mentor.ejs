@@ -1,0 +1,18 @@
+<li class="nas_li">
+    <ul class="nas_li_ul">
+        <li>
+            <% if (mentor.mentor_picture) { %>
+                <img class="nas_F" src="/<%= mentor.mentor_picture %> ">
+            <% } else { %>
+                <img class="nas_F" src="/default.jpg">
+            <% } %> 
+        </li>
+        <li style="min-height: 201px;">
+            <a href="/mentor?id=<%= mentor.id_mentor %>" style="text-decoration: none;">
+                <p class="nas_name"><%= mentor.mentor_fullName %></p>
+            </a>
+            <p class="nas_opisanie"><%= mentor.mentor_info %></p>
+            <p class="nas_kontact">тел.: <%= mentor.mentor_phone %><br /><br />почта: <%= mentor.mentor_email %><br /><br />соц. сеть: <%= mentor.mentor_link %><br /><br /></p>
+        </li>
+    </ul>
+</li>

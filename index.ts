@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import https from "https"
 import dotenv from "dotenv"
-import express from "express"
+import express, { NextFunction, Request, Response } from "express"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 
@@ -35,7 +35,7 @@ app.use(express.static(process.env.HOME_DIR as string + '/public/debug'))
 app.use(express.static(process.env.HOME_DIR as string + '/public/styles'))
 
 
-app.use('/api', routes)
+app.use('/', routes)
 
 const httpsOptions = {
     cert: fs.readFileSync(path.join(String(process.env.HTTPS_DIR), 'server.crt')),

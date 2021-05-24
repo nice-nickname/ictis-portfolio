@@ -2,6 +2,11 @@ import passport from "passport"
 import Strategy from "passport-azure-ad-oauth2"
 import jwt from "jsonwebtoken"
 
+interface SessionUser {
+    email: string,
+    name: string
+}
+
 function callback(accessToken: string, refreshToken: string, params: any, profile: any, done: Function) {
     let data = jwt.decode(params.id_token)
     done(null, data)
@@ -25,3 +30,6 @@ passport.use(new Strategy({
 }, callback))
 
 export default passport
+export {
+    SessionUser
+}

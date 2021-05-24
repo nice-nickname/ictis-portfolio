@@ -11,6 +11,10 @@ interface IMentor {
     mentor_phone: string
 }
 
+export {
+    IMentor
+}
+
 export default class MentorService {
 
     async getAllMentors() {

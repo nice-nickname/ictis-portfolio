@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('../util-parts/head', {
+
+}) %> 
+
+<body>
+    <div class="page">
+        <header>
+            
+            <%- include('../util-parts/menu', {
+                user: user,
+                activeElement: 1
+            }) %> 
+
+            <%- include('../util-parts/hamburgerMenu', {
+                user: user,
+            }) %> 
+    
+        </header>
+        <div class="nas">
+            <div class="nas_back">
+                <div class="blabla">
+                    <div class="NAS_P">
+                        <form>
+                            <!--<input type="search" name="Q" placeholder="  Введите имя или фамилию Наставника" class="NAS_P_in">-->
+                            <input type="text" placeholder="Введите имя или фамилию Наставника">
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+
+                    <%- include('./mentorsTrios', {
+                        mentors: mentors
+                    }) %> 
+                </div>
+            </div>
+        </div>
+
+        <%- include('../util-parts/footer', {
+
+        })  %> 
+
+    </div>
+</body>
+
+</html>

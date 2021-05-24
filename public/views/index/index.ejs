@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+<%- include('../util-parts/head', {
+
+}) %> 
+
+<body>
+    <div class="page">
+        <header>
+            
+            <%- include('../util-parts/menu', {
+                user: user,
+                activeElement: -1
+            })  %> 
+
+            <%- include('../util-parts/hamburgerMenu', {
+                user: user
+            })  %> 
+
+        </header>
+        <div class="index_fon">
+            <div class="index_fon_back">
+                <h1>Архив проектов<br/>
+                    ИКТИБ
+                </h1>
+                
+                <div class="slider_">
+                    <div class="slider_first">
+                        <div class="slider">
+                            <!-- Первый слайд -->
+                            <div class="item">
+                              <img src="https://tproger.ru/s3/uploads/2020/07/field.jpg">
+                            </div>
+                          
+                            <!-- Второй слайд -->
+                            <div class="item">
+                              <img src="https://tproger.ru/s3/uploads/2020/07/rose.jpg">
+                            </div>
+                          
+                            <!-- Третий слайд -->
+                            <div class="item">
+                              <img src="https://tproger.ru/s3/uploads/2020/07/leaf.jpg">
+                            </div>
+                          
+                            <!-- Кнопки-стрелочки -->
+                            <a class="previous_slider" onclick="previousSlide()">&#10094;</a>
+                            <a class="next_slider" onclick="nextSlide()">&#10095;</a>
+                          </div>
+                    </div>
+                    <div class="text_second">
+                        <p>Данный сайт помогает ознакомиться с проектами разных курсов прошлых годов и увидеть их результаты. Здесь так же можно посмотреть список текущих проектов и записаться на выбранный вами проект. Помимо этого на сайте можно найти информацию о наставниках.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <%- include('../util-parts/footer', {
+
+        })  %> 
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -39,6 +39,7 @@ build/Release
 build/
 images
 debug
+repo
 
 # Dependency directories
 node_modules/

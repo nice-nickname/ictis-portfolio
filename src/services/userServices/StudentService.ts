@@ -6,6 +6,10 @@ interface IStudent {
     student_year: string
 }
 
+export {
+    IStudent
+}
+
 export default class StudentService {
 
     async getAllStudents() {

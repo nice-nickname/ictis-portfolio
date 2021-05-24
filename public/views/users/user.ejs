@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('../util-parts/head', {}) %> 
+<body>
+    <div class="page">
+        <header>
+            
+            <%- include('../util-parts/menu', {
+                user: user,
+                activeElement: -1
+            }) %>
+
+            <%- include('../util-parts/hamburgerMenu', {
+                user: user
+            }) %>
+            
+        </header>
+        <div class="lichka_con">
+            <div class="lichka_con_fon">
+                <div class="profil_con">
+                    <div class="profil">
+                        <div class="profil_first_col">
+                            <div class="profil_img">
+                                <img style="width: 50%;" src="/default_user.jpg" alt="">
+                            </div>
+                            <div class="profli_person">
+                                <h3><%= user.name %></h3>
+                                <p><%= userInfo.levelLearn %>, Направление: <%= userInfo.speciality %>, <%= userInfo.grade %>  Курс</p>
+                                <p style="padding-bottom: 20px;">Почта: <%= userInfo.email %> </p>
+                            </div>
+                        </div>
+                        <div class="profil_second_col">
+                            <div class="profil_my_projects">
+                                <h1>Мои Проекты:</h1>
+                            </div>
+                            <div class="profil_proj">
+                                <p>Команда: Название</p>
+                                <p>Капитан команды: Имя капитана</p>
+                                <p>Состояние: Защищен(в процессе или не защищен)</p>
+                                <p>Наставник: О. А. Стельмах (Почта)</p>
+                            </div>
+                            <div class="profil_proj">
+                                <p>Команда: Название</p>
+                                <p>Капитан команды: Имя капитана</p>
+                                <p>Состояние: Защищен(в процессе или не защищен)</p>
+                                <p>Наставник: О. А. Стельмах (Почта)</p>
+                            </div>
+                            <div class="profil_proj" style="border: none;">
+                                <p>Команда: Название</p>
+                                <p>Капитан команды: Имя капитана</p>
+                                <p>Состояние: Защищен(в процессе или не защищен)</p>
+                                <p>Наставник: О. А. Стельмах (Почта)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Mob_TAb">
+                        <div class="First_row">
+                            <img src="default_user.jpg" alt="">
+                            <p class="Fule_name"><%= user.name %></p>
+                            <p class="Em_cl_proj"><%= user.email %></p>
+                            <p class="Em_cl_proj"><%= userInfo.levelLearn %>, Направление: <%= userInfo.speciality %>, <%= userInfo.grade %>  Курс</p>
+                            <p class="Em_cl_proj">Мои проекты:</p>
+                        </div>
+                        <div class="another_row">
+                            <p class="Lich_proj">
+                                Команда: Название
+                            </p>
+                            <p class="Lich_proj">
+                                Капитан команды: Имя капитана
+                                (или твое имя)
+                            </p>
+                            <p class="Lich_proj">
+                                Состояние: Защищен(в процессе или не защищен)
+                            </p>
+                            <p class="Lich_proj">
+                                Наставник: О. А. Стельмах
+                                (Почта)
+                            </p>
+                        </div>
+                        <div class="another_row">
+                            <p class="Lich_proj">
+                                Команда: NETRUNNERS
+                            </p>
+                            <p class="Lich_proj">
+                                Капитан команды: Д. Ю. Юрьевна
+                                (dyureva@sfedu.ru)
+                            </p>
+                            <p class="Lich_proj">
+                                Состояние: В процессе
+                            </p>
+                            <p class="Lich_proj">
+                                Наставник: О. А. Стельмах
+                                (Почта)
+                            </p>
+                        </div>
+                        <div class="another_row_last">
+                            <p class="Lich_proj">
+                                Команда: NETRUNNERS
+                            </p>
+                            <p class="Lich_proj">
+                                Капитан команды: Д. Ю. Юрьевна
+                                (dyureva@sfedu.ru)
+                            </p>
+                            <p class="Lich_proj">
+                                Состояние: Не защищен
+                            </p>
+                            <p class="Lich_proj">
+                                Наставник: О. А. Стельмах
+                                (Почта)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../util-parts/footer', {}) %>
+    </div>
+</body></html>

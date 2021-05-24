@@ -1,0 +1,19 @@
+<% for( let i = 0; i < projects.length; i += 3 ) { %>
+
+    <div class="portfolio_first_row second_row_por">
+    
+        <% for( let j = 0; j < 3 && i + j < projects.length; j++ ) { %>
+            <% let index = i + j %>
+            <% let last = false %> 
+            <% if (index == projects.length - 1) {
+                last = true
+            } %> 
+            <%- include('./project', {
+                project: projects[index],
+                isLast: last
+            }) %> 
+        <% } %>
+    
+    </div>
+
+<% } %>

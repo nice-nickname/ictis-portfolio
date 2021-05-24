@@ -10,6 +10,10 @@ interface IProject {
     project_mark: number
 }
 
+export {
+    IProject
+}
+
 export default class ProjectService {
 
     async getAllProjects() {

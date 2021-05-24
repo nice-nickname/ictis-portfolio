@@ -1,3 +1,4 @@
+import CategoriesService from "./projectServices/CategoriesService"
 import ProjectService from "./projectServices/ProjectService"
 import TeamService from "./teamServices/TeamService"
 import MentorService from "./userServices/MentorService"
@@ -7,5 +8,6 @@ export {
     StudentService,
     MentorService,
     TeamService,
-    ProjectService
+    ProjectService,
+    CategoriesService
 }

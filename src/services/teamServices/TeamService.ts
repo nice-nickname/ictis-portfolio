@@ -9,6 +9,10 @@ interface ITeam {
     students_roles: string[]
 }
 
+export {
+    ITeam
+}
+
 export default class TeamService {
 
     async getAllTeams() {
