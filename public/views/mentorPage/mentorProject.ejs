@@ -1,0 +1,29 @@
+<div class="nas_projects_list-item">
+
+    <style>
+        .nas_projects_list-item {
+            margin: 10px;
+            padding: 10px 5px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+
+        .nas_projects_list-item > p {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .nas_projects_list-item > a {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+    </style>
+    
+    <p style="text-align: left;"><strong>Название: </strong> <%= project.project_name %> </p>
+    <p style="text-align: left;"><strong>Команда: </strong> <%= project.Team.team_name %> </p>
+    <p style="text-align: left;"><%= project.project_info %> </p>
+    <a href="/project?id=<%= project.id_project %> ">Перейти к проекту</a>
+
+</div>

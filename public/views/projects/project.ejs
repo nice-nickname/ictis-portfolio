@@ -1,9 +1,31 @@
-<div class="portfolio_spisok_con 
-<% if (isLast) { %>
-    third_con_por
-<% } %>">
+<a href="/project?id=<%= project.id_project %>">
 
-    <p>Команда: <%= project.Team.team_name %> <br/>
-        Тема: "<%= project.project_name %> "<br/>
-        Наставник: <%= project.Team.Mentor.mentor_fullName %> </p>
-</div>
+    <div id="id-<%= elem_id %> " class="portfolio_spisok_con 
+
+    <% if (isLast) { %>
+        third_con_por
+    <% } %>">
+
+        <style>
+            #id-<%= elem_id %>\ {
+                
+                <% if (project.Team.team_picture) {%>
+                    background: url('/<%= project.Team.team_picture %>');
+                <% } else { %>
+                    background: url('/default_team.jpg');
+                <% } %>
+                
+                background-size: cover;
+                
+            }
+        </style>
+
+        <p>
+            Команда: <%= project.Team.team_name %> <br> 
+            Тема: <%= project.project_name %> <br> 
+            Наставник: <%= project.Team.Mentor.mentor_fullName %> <br> 
+        </p>
+
+    </div>
+
+</a>

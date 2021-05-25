@@ -7,6 +7,7 @@ router
     .get('/', controller.renderIndex)
     .get('/mentors', controller.renderMentors)
     .get('/projects', controller.renderProjects)
+    .get('/project', controller.renderProjectPage)
     .get('/registration', )
     .get('/faq', controller.renderFaq)
     .get('/team')

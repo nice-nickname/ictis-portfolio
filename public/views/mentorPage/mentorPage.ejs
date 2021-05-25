@@ -33,8 +33,7 @@
                             Меня зовут <%= name %>.
                         </p>
                         <p class="nas_lich_opis">
-                            Провожу занятия по информатики со школьниками.<br />
-                            Область профессиональных интересов web разработка.
+                            <%= mentor.mentor_info %> 
                         </p>
                         <div class="nas_lich_con_h_c">
                             <div class="nas_lich_h">
@@ -61,6 +60,15 @@
                         </div>
                         <div class="nas_lich_projects">
                             <p>Проекты</p>
+                            <div class="nas_projects_list">
+                            
+                                <% for( let i = 0; i < projects.length; i++ ) { %>
+                                    <%- include('./mentorProject', {
+                                        project: projects[i]
+                                    }) %> 
+                                <% } %> 
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,12 +81,7 @@
                     </div>
                     <div class="Tel_ho_co">
                         <div class="Tel_Hobby">
-                            <p>Мои хобби</p>
-                            <ul>
-                                <li>Так Так</li>
-                                <li>Так Так</li>
-                                <li>Так Так</li>
-                            </ul>
+                            <p><%= mentor.mentor_info %></p> 
                         </div>
                         <div class="Tel_contacts">
                             <p>Контакты</p>
@@ -89,48 +92,15 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="Tel_js">
-                        <p>Проект:
-                            <script>
-                                var x = "Название проекта";
-                                document.write(x);
-                            </script>
-                        </p>
-                        <p>Команда:
-                            <script>
-                                var x = "Название команды";
-                                document.write(x);
-                            </script>
-                        </p>
-                    </div> -->
-                    <div class="Tel_js">
-                        <p>Проект:
-                            <script>
-                                var x = "Название проекта";
-                                document.write(x);
-                            </script>
-                        </p>
-                        <p>Команда:
-                            <script>
-                                var x = "Название команды";
-                                document.write(x);
-                            </script>
-                        </p>
-                    </div>
-                    <div class="Tel_js">
-                        <p>Проект:
-                            <script>
-                                var x = "Название проекта";
-                                document.write(x);
-                            </script>
-                        </p>
-                        <p>Команда:
-                            <script>
-                                var x = "Название команды";
-                                document.write(x);
-                            </script>
-                        </p>
-                    </div>
+                    
+                    <% for( let i = 0; i < projects.length; i++ ) { %>
+                        
+                        <%- include('./mentorProjectMobile', {
+                            project: projects[i]
+                        }) %> 
+
+                    <% } %>
+
                 </div>
             </div>
         </div>

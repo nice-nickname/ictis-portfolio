@@ -108,6 +108,19 @@ class ViewsController {
             //projects: projects
         })
     }
+
+    async renderProjectPage(req: Request, res: Response) {
+        
+        let id = Number(req.query.id)
+
+        let qres = await projectsService.getProjectById(id)
+        let p = qres?.toJSON()
+
+        res.render('teams/team', {
+            user: req.user,
+            project: p
+        })
+    }
 }
 
 export default new ViewsController()
