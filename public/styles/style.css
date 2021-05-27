@@ -1,0 +1,6627 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: #5582BD;
+
+}
+
+.menu_li_active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio_select > select {
+    height: 20px;
+}
+
+.menu {
+    line-height: 60px;
+
+    list-style: none;
+}
+
+.li_img {
+    height: 50px;
+}
+
+.menu_li_img {
+
+    margin-left: -50px;
+    margin-top: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu_li {
+
+    padding: 0 50px;
+    float: left;
+}
+
+.portfolio_spisok_con p {
+    width: 100%;
+}
+
+.profil_my_projects-list {
+    height: 352px;
+}
+
+@media screen and (min-width: 1500px) {
+    .profil_my_projects-list {
+        height: 400px;
+    }
+}
+
+
+@media screen and (min-width: 1500px) {
+    .profil_my_projects-list {
+        height: 469px;
+    }
+}
+
+
+
+
+.index_fon{
+    padding: 0;
+    margin: 0;
+    background: url('../img/J_qPVKBksVM.jpg');
+    background-size: cover;
+}
+.index_fon_back{
+    padding-top: 50px;
+    position: relative;
+}
+.index_fon_back > * {
+    position: relative;
+    z-index: 2;
+}
+.index_fon_back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(121, 121, 121, 0.7);
+}
+.index_fon_back h1{
+    text-transform: uppercase;
+    font-family: 'Orelega One', cursive;
+    font-size: 65px;
+    margin-left: 7%;
+}
+.slider_{
+    padding-top: 50px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+.slider_first{
+    height: 300px;
+    width: 60%;
+}
+.text_second{
+    margin-left: 5%;
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* CЛАЙДЕР НА ГЛАВНОЙ */
+.slider{
+    max-width: 90%;
+    /* Положение элемента устанавливается относительно его исходной позиции: */
+    position: relative;
+    /* Центрируем по горизонтали: */
+    margin: auto;
+    height: 300px;
+}
+
+/* Картинка масштабируется по отношению к родительскому элементу: */
+.slider .item img {
+    /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+/* Кнопки назад и вперёд: */
+.slider .previous_slider, .slider .next_slider {
+    /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
+    cursor: pointer;
+    /* Положение элемента задаётся относительно границ браузера: */
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    /* Оформление самих кнопок: */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* Плавное появление фона при наведении курсора: */
+    transition: 0.6s ease;
+    /* Скругление границ: */
+    border-radius: 0 3px 3px 0;
+}
+.slider .next_slider {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* При наведении курсора на кнопки добавляем фон кнопок: */
+.slider .previous_slider:hover,
+.slider .next_slider:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация слайдов: */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+/* КОНЕЦ СЛАЙДЕРА */
+.footer {
+    /*margin-top: 15%;*/
+    margin-left: 55%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-top: auto;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.footer_div {}
+
+.footer ul {
+    margin-left: 7%;
+}
+
+.footer ul li {
+    margin-left: 5%;
+    float: left;
+    list-style: none;
+}
+
+.footer_img_last {}
+
+.Mob_TAb {
+    display: none;
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.menu_li_poisk {
+    margin-right: 5%;
+    float: left;
+}
+
+.menu_li_poisk input {
+    height: 30px;
+    border-radius: 15px;
+}
+
+.nas {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+
+.NAS_P {
+    padding-bottom: 30px;
+}
+
+.NAS_P form {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20px;
+}
+
+.NAS_P input, button {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.NAS_P input {
+    width: 100%;
+    height: 42px;
+    opacity: 0.8;
+    padding-left: 15px;
+}
+
+.NAS_P button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.NAS_P_in {
+    width: 80%;
+    margin-left: 10%;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.nas_back {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+    /*height: 567px;*/
+}
+
+.nas_back > * {
+    position: relative;
+    z-index: 2;
+}
+
+.nas_back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 178, 47, 0.2);
+    /*background: rgba(0,0,0,.8);*/
+    z-index: 1;
+}
+
+.blabla {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.nas_li_ul {
+    list-style: none;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.nas_ul {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nas_li {
+    
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    list-style: none;
+    float: left;
+
+
+}
+
+.nas_li img {
+    width: 160px;
+    height: 160px;
+    margin-top: 10%;
+    margin-left: 70px;
+    border-radius: 50%;
+}
+
+.nas_name {
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+.nas_opisanie {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.nas_kontact {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.nas_footer {}
+
+.footer_contacts {
+    padding-top: 21.5px;
+    font-size: 14px;
+}
+
+.footer_img {
+    /*width: 80px;
+    height: 80px;*/
+    display: flex;
+    height: 60px;
+    
+}
+.footer_img img {
+    width: 60px;
+    height: auto;
+}
+
+
+
+.team_div {
+
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+
+
+
+}
+
+.team_div_back {
+    padding-top: 1%;
+    padding-bottom: 5%;
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+}
+
+.team_div_back > * {
+    position: relative;
+    z-index: 2;
+}
+
+.team_div_back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(230, 178, 47, 0.2);
+}
+
+.team_container {
+    position: relative;
+    background: #FFFFFF;
+    border: 5px solid #283186;
+    border-radius: 50px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+
+}
+
+.team_opis_tex {
+    background: #FCF5B3;
+    width: 80%;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.team_opis_tex p {
+    margin-left: 1%;
+    padding-top: 15px;
+}
+
+.team_con {}
+
+.team_footer {
+    padding-top: 20px;
+}
+
+.img_team_div {
+    border-radius: 50%;
+}
+
+.img_team {
+    border-radius: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.Opis_komand {
+    margin-left: 5%;
+}
+
+.wrapper {
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 15%;
+}
+
+.accordion__title::marker {
+    display: none !important;
+}
+
+.accordion {
+    max-width: 80%;
+
+    overflow: hidden;
+}
+
+.accordion__title {
+    text-transform: uppercase;
+
+    text-align: left;
+    background: #D0E0E9;
+
+    outline: none;
+    cursor: pointer;
+    padding: 10px 40px 10px 20px;
+    transition: .3s all;
+    position: relative;
+    border-radius: 20px;
+}
+
+.accordion__title:hover {
+    background-color: #98bbcf;
+}
+
+.accordion__title::after {
+    display: block;
+    content: '▼';
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
+    border-radius: 20px;
+}
+
+.accordion__body {
+    padding: 2%;
+    border: 2px solid #364168;
+    border-radius: 20px;
+}
+
+.accordion__item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin: 2% 0px 0px 0px;
+    /*background: linear-gradient(180deg, #DCF2FF 0%, rgba(255, 255, 255, 0) 100%);*/
+
+}
+
+.faq_question {
+    border-radius: 20px;
+    border: 1px solid gray;
+    width: 90%;
+    margin-left: 5%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.faq_question h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.faq_question p {
+    padding-top: 5px;
+    margin-left: 5%;
+    padding-bottom: 10px;
+}
+
+.faq_form_input {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 90%;
+    height: 100px;
+    margin-left: 5%;
+    border-radius: 20px;
+    background: #D0E0E9;
+}
+
+.faq_form {
+    padding-bottom: 20px;
+}
+
+.faq_input {
+    padding-left: 10px;
+    background: #D0E0E9;
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid gray;
+    height: 30px;
+}
+
+.accordion__item[open] .accordion__title::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq_fon {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+.faq_fon_con {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.faq_fon_con > * {
+    position: relative;
+    z-index: 2;
+}
+
+.faq_fon_con::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 178, 47, 0.2);
+    z-index: 1;
+}
+
+.TeXtnis p {
+    margin-left: 72%;
+    margin-top: 2%;
+}
+
+.TeXt p {
+    margin-left: 10%;
+}
+
+.table_fon {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+.table_fon_fon {
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+    padding-bottom: 5%;
+}
+
+.table_fon_fon > * {
+    position: relative;
+    z-index: 2;
+}
+
+.table_fon_fon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 178, 47, 0.2);
+}
+
+.info_table {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.div_table {
+    background: #fff;
+    width: 80%;
+    border-radius: 10px;
+    margin-left: 10%;
+    border: 2px solid #364168;
+    box-shadow: 4px 4px 3px #364168;
+
+}
+
+.first_paragraph {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 70%;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.second_paragraph {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 20%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.third_paragraph {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 10%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.table__ {
+    width: 100%;
+}
+
+.lichka_con_fon {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+}
+
+.lichka_con_fon > * {
+    position: relative;
+    z-index: 2;
+}
+
+.lichka_con_fon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 178, 47, 0.2);
+    z-index: 1;
+}
+
+.lichka_con {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+.profil {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+    background: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.profil_con {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.profil_first_col {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profil_second_col {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profil_img {
+    padding-top: 40px;
+
+    padding-bottom: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.profil_img img {
+    margin-left: 108.5px;
+
+    border-radius: 50%;
+}
+
+.profli_person {
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid black;
+
+}
+
+.profli_person h3 {
+    padding-top: 20px;
+}
+
+.profli_person p {
+    padding-top: 10px;
+}
+
+.profil_my_projects {
+    border-bottom: 1px solid black;
+}
+
+.profil_my_projects h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 4%;
+}
+
+.profil_proj {
+    border-bottom: 1px solid black;
+}
+
+.profil_proj p {
+    padding-top: 7.2px;
+    padding-bottom: 3px;
+    margin-left: 4%;
+}
+
+.portfolio_con {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+.portfolio_con_back {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+}
+
+.portfolio_con_back > * {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio_con_back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(240, 206, 120, 0.9);
+    z-index: 1;
+}
+
+.portfolio_form {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.portfolio_select {
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.portfolio_spisok {}
+
+.portfolio_first_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nas_lich_projects {
+    height: 440px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.portfolio_spisok_con {
+    position: relative;
+    /* margin-left: 60px; */
+    border-radius: 30px;
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+.portfolio_spisok_con::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 30px;
+    z-index: 1;
+}
+.portfolio_spisok_con > * {
+    position: relative;
+    z-index: 2;
+}
+.portfolio_spisok_con p {
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.second_row_por {
+    margin-top: 0px;
+}
+
+.third_con_por {
+    margin-bottom: 50px;
+}
+
+.nas_table {
+    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+}
+
+.nas_table_fon {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background: url('../img/54vqUAPPfi4.jpg');
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.nas_table_fon > * {
+    position: relative;
+    z-index: 2;
+}
+
+.nas_table_fon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(230, 178, 47, 0.2);
+    z-index: 1;
+}
+
+.nas_lich_table {
+    padding-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nas_lich_first_col {
+    width: 50%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.nas_lich_photo {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nas_lich_photo_img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.nas_lich_hello {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.nas_lich_opis {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    opacity: 0.8;
+    padding-bottom: 30px;
+}
+
+.nas_lich_con_h_c {
+    display: flex;
+    flex-direction: row;
+}
+
+.nas_lich_h {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    width: 50%;
+}
+
+.nas_lich_h img {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.nas_lich_c {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    width: 50%;
+}
+
+.nas_lich_c li {
+    list-style: none;
+}
+
+.nas_lcih_second_col {
+    width: 50%;
+    background-color: #fff;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    text-align: center;
+
+}
+
+.nas_lich_name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nas_lich_opis_name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.8;
+    border-bottom: 1px solid gray;
+}
+
+.headerN {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+}
+
+.Hlich_col_name {
+    display: none;
+}
+
+.TEL {
+    display: none;
+}
+
+
+@media screen and (min-width: 1680px) {
+    header {
+        font-size: 25px;
+        height: 80px;
+        width: 100%;
+        background: #5582BD;
+
+    }
+
+    .nas_lich_projects {
+        height: 639px;
+    }
+
+    .slider_{
+        padding-bottom: 150px;
+    }
+    .slider{
+        height: 500px;
+        
+    }
+    .slider .item img {
+        /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .slider_first{
+        height: 500px;
+        width: 60%;
+    }
+    .text_second{
+        margin-left: 5%;
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 26px;
+    }
+    .text_second p{
+        margin-top: 50px;
+        line-height: 40px;
+    }
+
+    .menu {
+        line-height: 80px;
+
+        list-style: none;
+    }
+
+    .li_img {
+        height: 50px;
+    }
+
+    .menu_li_img {
+
+        margin-left: -50px;
+        margin-top: 15px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .menu_li {
+
+        padding: 0 65px;
+        float: left;
+    }
+
+    .nas {
+        background: url('`Pz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .NAS_P {
+        padding-bottom: 30px;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 60px;
+        border-radius: 20px;
+
+    }
+
+    .nas_back {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_li {
+        margin-left: 0%;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 400px;
+
+        list-style: none;
+        float: left;
+
+
+    }
+
+    .nas_li img {
+        width: 300px;
+        height: 300px;
+        margin-top: 10%;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    .nas_name {
+        font-size: 28px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        font-size: 26px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    .nas_kontact {
+        font-size: 26px;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_table {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .nas_lich_table {
+        padding-top: 50px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nas_lich_first_col {
+        width: 50%;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .nas_lich_photo {
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_photo_img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .nas_lich_hello {
+        font-size: 25px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .nas_lich_opis {
+        font-size: 25px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        opacity: 0.8;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_con_h_c {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_lich_h {
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_h img {
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .nas_lich_c {
+        font-size: 22px;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_c li {
+        padding-top: 30px;
+        list-style: none;
+    }
+
+    .nas_lcih_second_col {
+        font-size: 25px;
+        width: 50%;
+        background-color: #fff;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
+        text-align: center;
+
+    }
+
+    .nas_lich_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nas_lich_opis_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        opacity: 0.8;
+        border-bottom: 1px solid gray;
+    }
+
+    .footer {
+        font-size: 19px;
+        /*margin-top: 15%;*/
+        margin-left: 64%;
+        margin-top: auto;
+    }
+
+    .faq_footer {
+        margin-left: 70%;
+    }
+
+    .info_table {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    .div_table {
+        background: #fff;
+        width: 80%;
+        border-radius: 10px;
+        margin-left: 10%;
+        border: 2px solid #364168;
+        box-shadow: 4px 4px 3px #364168;
+
+    }
+
+    .first_paragraph {
+        font-size: 26px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 70%;
+        text-align: center;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .second_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 20%;
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .third_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .portfolio_form {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_select {
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio_spisok {}
+
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio_spisok_con {
+        font-size: 26px;
+        margin-left: 80px;
+        border-radius: 30px;
+        width: 400px;
+        height: 250px;
+        
+        text-align: center;
+    }
+
+    .portfolio_spisok_con p {
+        top: 50%;
+        transform: translate(0, -50%);
+
+    }
+
+    .second_row_por {
+        margin-top: 0px;
+    }
+
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .profil_con {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .profil_img {
+        padding-top: 40px;
+
+        padding-bottom: 50px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .profil_img img {
+        margin-left: 122.5px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .profli_person {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid black;
+
+    }
+
+    .profli_person h3 {
+        font-size: 30px;
+        padding-top: 25px;
+    }
+
+    .profli_person p {
+        font-size: 28px;
+        padding-top: 20px;
+        
+    }
+
+    .profil_my_projects {
+        font-size: 28px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_my_projects h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 4%;
+    }
+
+    .profil_proj {
+        font-size: 25px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_proj p {
+        padding-top: 7.2px;
+        padding-bottom: 3px;
+        margin-left: 4%;
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 2%;
+
+    }
+
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 100px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .team_opis_tex p {
+        margin-left: 5%;
+        padding-top: 15px;
+    }
+
+    .team_con {
+        font-size: 26px;
+    }
+
+    .team_footer {
+        padding-top: 20px;
+    }
+
+    .img_team_div {
+        border-radius: 50%;
+    }
+
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 10%;
+        font-size: 26px;
+    }
+
+    summary::marker {
+        display: none;
+    }
+
+    .accordion {
+        max-width: 80%;
+
+        overflow: hidden;
+    }
+
+    .accordion__title {
+        text-transform: uppercase;
+
+        text-align: left;
+        background: #D0E0E9;
+
+        outline: none;
+        cursor: pointer;
+        padding: 10px 40px 10px 20px;
+        transition: .3s all;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    .accordion__title:hover {
+        background-color: #98bbcf;
+    }
+
+    .accordion__title::after {
+        display: block;
+        content: '▼';
+        position: absolute;
+        left: 96%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s all;
+        border-radius: 20px;
+    }
+
+    .accordion__body {
+        padding: 2%;
+        border: 2px solid #364168;
+        border-radius: 20px;
+    }
+
+    .accordion__item {
+        background: #fff;
+        border-radius: 20px;
+        margin: 2% 0px 0px 0px;
+        /*background: linear-gradient(180deg, #DCF2FF 0%, rgba(255, 255, 255, 0) 100%);*/
+
+    }
+
+    .faq_question {
+        font-size: 26px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        width: 90%;
+        margin-left: 5%;
+        background-color: #fff;
+    }
+
+    .faq_question h2 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .faq_question p {
+        padding-top: 5px;
+        margin-left: 5%;
+        padding-bottom: 10px;
+    }
+
+    .faq_form_input {
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        border-radius: 20px;
+        background: #D0E0E9;
+    }
+
+    .faq_form {
+        padding-bottom: 20px;
+    }
+
+    .faq_input {
+        background: #D0E0E9;
+        margin-left: 5%;
+        width: 90%;
+        border-radius: 20px;
+        border: 1px solid gray;
+        height: 50px;
+    }
+
+    .accordion__item[open] .accordion__title::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .profil_img {
+        padding-top: 40px;
+    
+        padding-bottom: 50px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
+    
+}
+@media screen and (min-width: 1920px) {
+    header {
+        font-size: 25px;
+        height: 80px;
+        width: 100%;
+        background: #5582BD;
+
+    }
+    .slider_{
+        padding-bottom: 150px;
+    }
+    .slider{
+        height: 500px;
+        
+    }
+    .slider .item img {
+        /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .slider_first{
+        height: 500px;
+        width: 60%;
+    }
+    .text_second{
+        margin-left: 5%;
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .text_second p{
+        margin-top: 50px;
+        line-height: 40px;
+    }
+
+    .menu {
+        line-height: 80px;
+
+        list-style: none;
+    }
+
+    .li_img {
+        height: 50px;
+    }
+
+    .menu_li_img {
+
+        margin-left: -50px;
+        margin-top: 15px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .menu_li {
+
+        padding: 0 85px;
+        float: left;
+    }
+
+    .nas {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .NAS_P {
+        padding-bottom: 30px;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 60px;
+        border-radius: 20px;
+
+    }
+
+    .nas_back {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_li {
+        margin-left: 0%;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 400px;
+        
+        list-style: none;
+        float: left;
+
+
+    }
+
+    .nas_li img {
+        width: 300px;
+        height: 300px;
+        margin-top: 10%;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+
+    .nas_name {
+        font-size: 28px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        font-size: 26px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    .nas_kontact {
+        font-size: 26px;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_table {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .nas_lich_table {
+        padding-top: 50px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 50px;
+    }
+
+    .nas_lich_first_col {
+        width: 50%;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .nas_lich_photo {
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_photo_img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .nas_lich_hello {
+        font-size: 25px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .nas_lich_opis {
+        font-size: 25px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        opacity: 0.8;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_con_h_c {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_lich_h {
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_h img {
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .nas_lich_c {
+        font-size: 22px;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_c li {
+        padding-top: 30px;
+        list-style: none;
+    }
+
+    .nas_lcih_second_col {
+        font-size: 25px;
+        width: 50%;
+        background-color: #fff;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
+        text-align: center;
+
+    }
+
+    .nas_lich_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nas_lich_opis_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        opacity: 0.8;
+        border-bottom: 1px solid gray;
+    }
+
+    .footer {
+        font-size: 22px;
+        /*margin-top: 15%;*/
+        margin-left: 70%;
+        margin-top: auto;
+    }
+
+    .faq_footer {
+        margin-left: 70%;
+    }
+
+    .info_table {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    .div_table {
+        background: #fff;
+        width: 80%;
+        border-radius: 10px;
+        margin-left: 10%;
+        border: 2px solid #364168;
+        box-shadow: 4px 4px 3px #364168;
+
+    }
+
+    .first_paragraph {
+        font-size: 26px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 70%;
+        text-align: center;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .second_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 20%;
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .third_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .portfolio_form {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_select {
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio_spisok {}
+
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio_spisok_con {
+        font-size: 26px;
+        margin-left: 60px;
+        border-radius: 30px;
+        width: 500px;
+        height: 250px;
+        
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .portfolio_spisok_con p {
+       top: 50%;
+       transform: translate(0, -50%);
+    }
+
+    .second_row_por {
+        margin-top: 00px;
+    }
+
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+
+    .profil_img {
+        padding-top: 40px;
+
+        padding-bottom: 50px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .profil_img img {
+        margin-left: 239.203px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .profli_person {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid black;
+
+    }
+
+    .profli_person h3 {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    .profli_person p {
+        font-size: 26px;
+        padding-top: 10px;
+    }
+
+    .profil_my_projects {
+        font-size: 28px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_my_projects h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 4%;
+    }
+
+    .profil_proj {
+        font-size: 25px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_proj p {
+        padding-top: 7.2px;
+        padding-bottom: 3px;
+        margin-left: 4%;
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 2%;
+
+    }
+
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 100px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .team_opis_tex p {
+        margin-left: 5%;
+        padding-top: 15px;
+    }
+
+    .team_con {
+        font-size: 26px;
+    }
+
+    .team_footer {
+        padding-top: 20px;
+    }
+
+    .img_team_div {
+        border-radius: 50%;
+    }
+
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 16%;
+        font-size: 26px;
+    }
+
+    summary::marker {
+        display: none;
+    }
+
+    .accordion {
+        max-width: 80%;
+
+        overflow: hidden;
+    }
+
+    .accordion__title {
+        text-transform: uppercase;
+
+        text-align: left;
+        background: #D0E0E9;
+
+        outline: none;
+        cursor: pointer;
+        padding: 10px 40px 10px 20px;
+        transition: .3s all;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    .accordion__title:hover {
+        background-color: #98bbcf;
+    }
+
+    .accordion__title::after {
+        display: block;
+        content: '▼';
+        position: absolute;
+        left: 95%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s all;
+        border-radius: 20px;
+    }
+
+    .accordion__body {
+        padding: 2%;
+        border: 2px solid #364168;
+        border-radius: 20px;
+    }
+
+    .accordion__item {
+        background: #fff;
+        border-radius: 20px;
+        margin: 2% 0px 0px 0px;
+        /*background: linear-gradient(180deg, #DCF2FF 0%, rgba(255, 255, 255, 0) 100%);*/
+
+    }
+
+    .faq_question {
+        font-size: 26px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        width: 90%;
+        margin-left: 5%;
+        background-color: #fff;
+    }
+
+    .faq_question h2 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .faq_question p {
+        padding-top: 5px;
+        margin-left: 5%;
+        padding-bottom: 10px;
+    }
+
+    .faq_form_input {
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        border-radius: 20px;
+        background: #D0E0E9;
+    }
+
+    .faq_form {
+        padding-bottom: 20px;
+    }
+
+    .faq_input {
+        background: #D0E0E9;
+        margin-left: 5%;
+        width: 90%;
+        border-radius: 20px;
+        border: 1px solid gray;
+        height: 50px;
+    }
+
+    .accordion__item[open] .accordion__title::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .profil_img {
+        padding-top: 40px;
+    
+        padding-bottom: 50px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
+    .profil_img img {
+        margin-left: 160.5px;
+    
+        border-radius: 50%;
+    }
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    
+    
+    
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+@media screen and (min-width: 2405px) {
+    header {
+        font-size: 25px;
+        height: 80px;
+        width: 100%;
+        background: #5582BD;
+
+    }
+    .slider_{
+        padding-bottom: 150px;
+    }
+    .slider{
+        height: 500px;
+        
+    }
+    .slider .item img {
+        /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+    .slider_first{
+        height: 500px;
+        width: 60%;
+    }
+    .text_second{
+        margin-left: 5%;
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 26px;
+    }
+    .text_second p{
+        margin-top: 50px;
+        line-height: 40px;
+    }
+
+    .menu {
+        line-height: 80px;
+
+        list-style: none;
+    }
+
+    .li_img {
+        height: 50px;
+    }
+
+    .menu_li_img {
+
+        margin-left: -50px;
+        margin-top: 15px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .menu_li {
+
+        padding: 0 100px;
+        float: left;
+    }
+
+    .nas {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .NAS_P {
+        padding-bottom: 30px;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 60px;
+        border-radius: 20px;
+
+    }
+
+    .nas_back {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_li {
+       
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 600px;
+
+        list-style: none;
+        float: left;
+
+
+    }
+
+    .nas_li img {
+        width: 300px;
+        height: 300px;
+        margin-top: 10%;
+        margin-left: 150px;
+        border-radius: 50%;
+    }
+
+    .nas_name {
+        font-size: 28px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        font-size: 26px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+
+    .nas_kontact {
+        font-size: 26px;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_table {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .nas_lich_table {
+        padding-top: 50px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nas_lich_first_col {
+        width: 50%;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .nas_lich_photo {
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_photo_img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .nas_lich_hello {
+        font-size: 30px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .nas_lich_opis {
+        font-size: 28px;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        opacity: 0.8;
+        padding-bottom: 30px;
+    }
+
+    .nas_lich_con_h_c {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nas_lich_h {
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_h img {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .nas_lich_c {
+        font-size: 28px;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 50%;
+    }
+
+    .nas_lich_c li {
+        padding-top: 30px;
+        list-style: none;
+    }
+
+    .nas_lcih_second_col {
+        font-size: 28px;
+        width: 50%;
+        background-color: #fff;
+        border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
+        text-align: center;
+
+    }
+
+    .nas_lich_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nas_lich_opis_name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        opacity: 0.8;
+        border-bottom: 1px solid gray;
+    }
+
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 74%;
+        margin-top: auto;
+    }
+
+    .faq_footer {
+        margin-left: 70%;
+    }
+
+    .info_table {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    .div_table {
+        background: #fff;
+        width: 80%;
+        border-radius: 10px;
+        margin-left: 10%;
+        border: 2px solid #364168;
+        box-shadow: 4px 4px 3px #364168;
+
+    }
+
+    .first_paragraph {
+        font-size: 26px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 70%;
+        text-align: center;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .second_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 20%;
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .third_paragraph {
+        font-size: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .portfolio_form {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_select {
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio_spisok {}
+
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolio_spisok_con {
+        font-size: 26px;
+        margin-left: 170px;
+        border-radius: 30px;
+        width: 500px;
+        height: 250px;
+        
+        text-align: center;
+    }
+
+    .portfolio_spisok_con p {
+        top: 50%;
+    transform: translate(0, -50%);
+    }
+
+    .second_row_por {
+        margin-top: 00px;
+    }
+
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+
+    .profil_img {
+        padding-top: 40px;
+
+        padding-bottom: 50px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .profil_img img {
+        margin-left: 239.203px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .profli_person {
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid black;
+
+    }
+
+    .profli_person h3 {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    .profli_person p {
+        font-size: 26px;
+        padding-top: 10px;
+    }
+
+    .profil_my_projects {
+        font-size: 28px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_my_projects h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 4%;
+    }
+
+    .profil_proj {
+        font-size: 23px;
+        border-bottom: 1px solid black;
+    }
+
+    .profil_proj p {
+        padding-top: 7.2px;
+        padding-bottom: 3px;
+        margin-left: 4%;
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 2%;
+
+    }
+
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 100px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .team_opis_tex p {
+        margin-left: 5%;
+        padding-top: 15px;
+    }
+
+    .team_con {
+        font-size: 26px;
+    }
+
+    .team_footer {
+        padding-top: 20px;
+    }
+
+    .img_team_div {
+        border-radius: 50%;
+    }
+
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 10%;
+        font-size: 26px;
+    }
+
+    summary::marker {
+        display: none;
+    }
+
+    .accordion {
+        max-width: 80%;
+        margin-left: 114px;
+        overflow: hidden;
+    }
+
+    .accordion__title {
+        text-transform: uppercase;
+
+        text-align: left;
+        background: #D0E0E9;
+
+        outline: none;
+        cursor: pointer;
+        padding: 10px 40px 10px 20px;
+        transition: .3s all;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    .accordion__title:hover {
+        background-color: #98bbcf;
+    }
+
+    .accordion__title::after {
+        display: block;
+        content: '▼';
+        position: absolute;
+        left: 95%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s all;
+        border-radius: 20px;
+    }
+
+    .accordion__body {
+        padding: 2%;
+        border: 2px solid #364168;
+        border-radius: 20px;
+    }
+
+    .accordion__item {
+        background: #fff;
+        border-radius: 20px;
+        margin: 2% 0px 0px 0px;
+        /*background: linear-gradient(180deg, #DCF2FF 0%, rgba(255, 255, 255, 0) 100%);*/
+
+    }
+
+    .faq_question {
+        font-size: 26px;
+        border-radius: 20px;
+        border: 1px solid gray;
+        width: 90%;
+        margin-left: 5%;
+        background-color: #fff;
+    }
+
+    .faq_question h2 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .faq_question p {
+        padding-top: 5px;
+        margin-left: 5%;
+        padding-bottom: 10px;
+    }
+
+    .faq_form_input {
+        width: 90%;
+        height: 150px;
+        margin-left: 5%;
+        border-radius: 20px;
+        background: #D0E0E9;
+    }
+
+    .faq_form {
+        padding-bottom: 20px;
+    }
+
+    .faq_input {
+        background: #D0E0E9;
+        margin-left: 5%;
+        width: 90%;
+        border-radius: 20px;
+        border: 1px solid gray;
+        height: 50px;
+    }
+
+    .accordion__item[open] .accordion__title::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU21.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .nas_lich_projects {
+        height: 412px;
+    }
+}
+
+@media screen and (max-width: 919px) {
+    .nas_lich_projects {
+        height: 519px;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    header {
+        position: fixed;
+        height: 60px;
+        z-index: 60;
+        width: 100%;
+        background: #5582BD;
+        font-size: 25px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+        z-index: 55;
+        cursor: pointer;
+
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        z-index: 55;
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+
+        right: -100%;
+
+        width: 300px;
+        padding-bottom: 50px;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 45;
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 50;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+        display: flex;
+
+    }
+
+    .hamburger-menu img {
+        width: 40%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .slider_{
+        flex-direction: column;
+    }
+    .slider_first{
+        width: 100%;
+    }
+    .text_second{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        padding-top: 70px;
+        padding-bottom: 85px;
+    }
+    .index_fon_back h1{
+        font-size: 55px;
+        padding-top: 25px;
+    }
+
+
+    /*----------------------- НАСТАВНИКИ -------------------------------*/
+    .nas {
+        padding-top: 4%;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+    .nas_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nas_li {
+        margin: 15px auto;
+        background-color: #fff;
+        font-size: 11px;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 500px;
+        list-style: none;
+        font-size: 20px;
+
+    }
+
+
+    .nas_li img {
+        width: 200px;
+        height: 200px;
+        margin-top: 10%;
+        margin-left: 0px;
+    }
+
+    .nas_name {
+        padding-top: 20px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+        display: none;
+    }
+
+    .nas_kontact {
+
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_F {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .nas_li_ul {
+        list-style: none;
+
+    }
+
+    .nas_li_ul li {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+
+
+    /*----------------------- КОНЕЦ НАСТАВНИКИ -------------------------------*/
+    /*----------------------- Футер -------------------------------*/
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 30%;
+        padding-top: 5px;
+        margin-top: auto;
+    }
+
+    .footer_img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .footer_contacts {
+        font-size: 18px;
+    }
+
+    .footer ul {
+        margin-left: 0;
+    }
+
+    .footer ul li {
+        margin-left: 2%;
+        float: left;
+        list-style: none;
+    }
+
+
+
+    /*----------------------- КОНЕЦ Футера -------------------------------*/
+
+    /*----------------------- НАЧАЛО TEAM -------------------------------*/
+
+    .team_div_back {
+        padding-top: 5%;
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .team_div_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .team_div_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(230, 178, 47, 0.2);
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+        font-size: 20px;
+
+    }
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        width: 100%;
+        height: 100%;
+    }
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 130px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .team_opis_tex p {
+        margin-left: 1%;
+        padding-top: 15px;
+    }
+
+    /*----------------------- КОНЕЦ Team -------------------------------*/
+
+    /*----------------------- НАЧАЛО TABLE -------------------------------*/
+
+    .table_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+    }
+
+    .table_fon_fon {
+        width: 100%;
+        margin-left: 0%;
+        position: relative;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 5%;
+        font-size: 25px;
+    }
+
+    .table_fon_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .table_fon_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+    }
+    /*----------------------- КОНЕЦ TABLE -------------------------------*/
+
+    /*----------------------- НАЧАЛО NASLICHKA -------------------------------*/
+
+    .lich {
+        display: none;
+    }
+
+    .nas_lich_table {
+        display: none;
+    }
+
+    .nas_table_fon {
+        padding-top: 20%;
+
+    }
+
+    .TEL {
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 20px 20px 0px 0px;
+        background: #fff;
+        font-size: 25px;
+
+    }
+
+    .Tel_photo {
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_photo img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+
+    .Tel_name {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .Tel_ho_co {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_Hobby {
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+
+    .Tel_Hobby p {
+        padding-top: 5px;
+    }
+
+    .Tel_Hobby ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_contacts {
+        text-align: center;
+        width: 50%;
+    }
+
+    .Tel_contacts p {
+        padding-top: 5px;
+    }
+
+    .Tel_contacts ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_js {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_js p {
+        padding-bottom: 5px;
+    }
+
+    .naslich_tel {
+        padding-top: 20px;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+        font-size: 25px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    /*----------------------- КОНЕЦ NASLICHKA -------------------------------*/
+
+    /*----------------------- НАЧАЛО Lichka -------------------------------*/
+    .lichka_con_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        font-size: 25px;
+    }
+
+    .lichka_con_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lichka_con_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .Mob_TAb {
+        border-radius: 20px;
+        margin-top: 10%;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        background: #fff;
+        border: 1px solid gray;
+    }
+
+    .First_row {
+        padding-top: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .First_row img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        margin-left: 33.5%;
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .another_row {
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Change_photo {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .Fule_name {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .Em_cl_proj {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Lich_proj {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+
+    .another_row_last {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*----------------------- КОНЕЦ Lichka -------------------------------*/
+    /*----------------------- FAQ -------------------------------*/
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+        font-size: 25px;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+
+
+    }
+
+    /*----------------------- КОНЕЦ FAQ -------------------------------*/
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio_spisok_con {
+        margin-left: 17.5%;
+        margin-bottom: 119px;
+        border-radius: 30px;
+        width: 500px;
+        height: 200px;
+        background: url('../img/qtPz0qNj1YU2.png');
+        color: white;
+        text-align: center;
+    }
+    .portfolio_spisok_con::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 30px;
+        z-index: 1;
+        display: none;
+    }
+    .portfolio_spisok_con p {
+        
+        font-size: 23px;
+        margin-top: 58px;
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+        background-color: rgba(255,255,255,0.5);
+        
+    }
+    .portfolio_con_back {
+        background-size: cover;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.6);
+        z-index: 1;
+    }
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+@media screen and (max-width:414px) {
+    header {
+        position: fixed;
+        height: 60px;
+        z-index: 60;
+        width: 100%;
+        background: #5582BD;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+        z-index: 55;
+        cursor: pointer;
+
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        z-index: 55;
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+
+        right: -100%;
+
+        width: 300px;
+        padding-bottom: 50px;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 45;
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 50;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+        display: flex;
+
+    }
+
+    .hamburger-menu img {
+        width: 40%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .slider_{
+        flex-direction: column;
+    }
+    .slider_first{
+        width: 100%;
+    }
+    .text_second{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .index_fon_back h1{
+        font-size: 55px;
+        padding-top: 25px;
+    }
+
+
+    /*----------------------- НАСТАВНИКИ -------------------------------*/
+    .nas {
+        padding-top: 10%;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .nas_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nas_li {
+        margin: 15px auto;
+        background-color: #fff;
+        font-size: 11px;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 350px;
+        list-style: none;
+        font-size: 14px;
+
+    }
+
+
+    .nas_li img {
+        width: 150px;
+        height: 150px;
+        margin-top: 10%;
+        margin-left: 0px;
+    }
+
+    .nas_name {
+        padding-top: 20px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+        display: none;
+    }
+
+    .nas_kontact {
+
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_F {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .nas_li_ul {
+        list-style: none;
+
+    }
+
+    .nas_li_ul li {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+
+
+    /*----------------------- КОНЕЦ НАСТАВНИКИ -------------------------------*/
+    /*----------------------- Футер -------------------------------*/
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 0;
+        padding-top: 5px;
+        margin-top: auto;
+    }
+
+    .footer_img {
+        height: 65px;
+        width: 65px;
+    }
+
+    .footer_contacts {
+        font-size: 13px;
+    }
+
+    .footer ul {
+        margin-left: 0;
+    }
+
+    .footer ul li {
+        margin-left: 2%;
+        float: left;
+        list-style: none;
+    }
+
+
+
+    /*----------------------- КОНЕЦ Футера -------------------------------*/
+
+    /*----------------------- НАЧАЛО TEAM -------------------------------*/
+
+    .team_div_back {
+        padding-top: 5%;
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .team_div_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .team_div_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(230, 178, 47, 0.2);
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15%;
+
+    }
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        width: 80%;
+        height: 80%;
+    }
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 130px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .team_opis_tex p {
+        margin-left: 1%;
+        padding-top: 15px;
+    }
+
+    /*----------------------- КОНЕЦ Team -------------------------------*/
+
+    /*----------------------- НАЧАЛО TABLE -------------------------------*/
+
+    .table_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+    }
+
+    .table_fon_fon {
+        width: 100%;
+        margin-left: 0%;
+        position: relative;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 5%;
+        font-size: 14px;
+    }
+
+    .table_fon_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .table_fon_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+    }
+    /*----------------------- КОНЕЦ TABLE -------------------------------*/
+
+    /*----------------------- НАЧАЛО NASLICHKA -------------------------------*/
+
+    .lich {
+        display: none;
+    }
+
+    .nas_lich_table {
+        display: none;
+    }
+
+    .nas_table_fon {
+        padding-top: 20%;
+
+    }
+
+    .TEL {
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 20px 20px 0px 0px;
+        background: #fff;
+
+    }
+
+    .Tel_photo {
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_photo img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    .Tel_name {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .Tel_ho_co {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_Hobby {
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+
+    .Tel_Hobby p {
+        padding-top: 5px;
+    }
+
+    .Tel_Hobby ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_contacts {
+        text-align: center;
+        width: 50%;
+    }
+
+    .Tel_contacts p {
+        padding-top: 5px;
+    }
+
+    .Tel_contacts ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_js {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_js p {
+        padding-bottom: 5px;
+    }
+
+    .naslich_tel {
+        padding-top: 20px;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    /*----------------------- КОНЕЦ NASLICHKA -------------------------------*/
+
+    /*----------------------- НАЧАЛО Lichka -------------------------------*/
+    .lichka_con_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .lichka_con_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lichka_con_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .Mob_TAb {
+        border-radius: 20px;
+        margin-top: 10%;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        background: #fff;
+        border: 1px solid gray;
+    }
+
+    .First_row {
+        padding-top: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .First_row img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        margin-left: 16%;
+    }
+
+    .another_row {
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Change_photo {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .Fule_name {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .Em_cl_proj {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Lich_proj {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+
+    .another_row_last {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*----------------------- КОНЕЦ Lichka -------------------------------*/
+    /*----------------------- FAQ -------------------------------*/
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+       margin-top:  50px;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+
+    }
+    .accordion__title::after {
+    display: block;
+    content: '▼';
+    position: absolute;
+    left: 83%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
+    border-radius: 20px;
+}
+
+    /*----------------------- КОНЕЦ FAQ -------------------------------*/
+
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio_spisok_con {
+        margin-left: 14%;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        width: 300px;
+        height: 200px;
+        background: url('../img/qtPz0qNj1YU2.png');
+        color: white;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .portfolio_spisok_con::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 30px;
+        z-index: 1;
+        display: none;
+    }
+    .portfolio_spisok_con p {
+        font-size: 19px;
+        margin-top: 42.5px;
+        border-radius: 0 0 30px 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .portfolio_con_back {
+        background-size: cover;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.6);
+        z-index: 1;
+    }
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 80px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+
+@media screen and (max-width: 650px) {
+    .lichka_con_fon {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:393px) {
+    header {
+        position: fixed;
+        height: 60px;
+        z-index: 60;
+        width: 100%;
+        background: #5582BD;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+        z-index: 55;
+        cursor: pointer;
+
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        z-index: 55;
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+
+        right: -100%;
+
+        width: 300px;
+        padding-bottom: 50px;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 45;
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 50;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+        display: flex;
+
+    }
+
+    .hamburger-menu img {
+        width: 40%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .slider_{
+        flex-direction: column;
+    }
+    .slider_first{
+        width: 100%;
+    }
+    .text_second{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .index_fon_back h1{
+        font-size: 55px;
+        padding-top: 25px;
+    }
+
+
+    /*----------------------- НАСТАВНИКИ -------------------------------*/
+    .nas {
+        padding-top: 10%;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .nas_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nas_li {
+        margin: 15px auto;
+        background-color: #fff;
+        font-size: 11px;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 350px;
+        list-style: none;
+        font-size: 13px;
+
+    }
+
+
+    .nas_li img {
+        width: 150px;
+        height: 150px;
+        margin-top: 10%;
+        margin-left: 0px;
+    }
+
+    .nas_name {
+        padding-top: 20px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+        display: none;
+    }
+
+    .nas_kontact {
+
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_F {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .nas_li_ul {
+        list-style: none;
+
+    }
+
+    .nas_li_ul li {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+
+
+    /*----------------------- КОНЕЦ НАСТАВНИКИ -------------------------------*/
+    /*----------------------- Футер -------------------------------*/
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 0;
+        padding-top: 5px;
+        margin-top: auto;
+    }
+
+    .footer_img {
+        height: 65px;
+        width: 65px;
+    }
+
+    .footer_contacts {
+        font-size: 13px;
+    }
+
+    .footer ul {
+        margin-left: 0;
+    }
+
+    .footer ul li {
+        margin-left: 2%;
+        float: left;
+        list-style: none;
+    }
+
+
+
+    /*----------------------- КОНЕЦ Футера -------------------------------*/
+
+    /*----------------------- НАЧАЛО TEAM -------------------------------*/
+
+    
+    .team_div_back {
+        padding-top: 5%;
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .team_div_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .team_div_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(230, 178, 47, 0.2);
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: 4%;
+        margin-top: 15%;
+
+    }
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        width: 100%;
+        height: 100%;
+    }
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 130px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .team_opis_tex p {
+        widows: 80%;
+        font-size: 18px;
+        margin-left: 1%;
+        padding-top: 15px;
+    }
+
+    /*----------------------- КОНЕЦ Team -------------------------------*/
+
+    /*----------------------- НАЧАЛО TABLE -------------------------------*/
+
+    .table_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+    }
+
+    .table_fon_fon {
+        width: 100%;
+        margin-left: 0%;
+        position: relative;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 5%;
+        font-size: 14px;
+    }
+
+    .table_fon_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .table_fon_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+    }
+    /*----------------------- КОНЕЦ TABLE -------------------------------*/
+
+    /*----------------------- НАЧАЛО NASLICHKA -------------------------------*/
+
+    .lich {
+        display: none;
+    }
+
+    .nas_lich_table {
+        display: none;
+    }
+
+    .nas_table_fon {
+        padding-top: 20%;
+
+    }
+
+    .TEL {
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 20px 20px 0px 0px;
+        background: #fff;
+
+    }
+
+    .Tel_photo {
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_photo img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    .Tel_name {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .Tel_ho_co {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_Hobby {
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+
+    .Tel_Hobby p {
+        padding-top: 5px;
+    }
+
+    .Tel_Hobby ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_contacts {
+        text-align: center;
+        width: 50%;
+    }
+
+    .Tel_contacts p {
+        padding-top: 5px;
+    }
+
+    .Tel_contacts ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_js {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_js p {
+        padding-bottom: 5px;
+    }
+
+    .naslich_tel {
+        padding-top: 20px;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    /*----------------------- КОНЕЦ NASLICHKA -------------------------------*/
+
+    /*----------------------- НАЧАЛО Lichka -------------------------------*/
+    .lichka_con_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .lichka_con_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lichka_con_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .Mob_TAb {
+        border-radius: 20px;
+        margin-top: 10%;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        background: #fff;
+        border: 1px solid gray;
+    }
+
+    .First_row {
+        padding-top: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .First_row img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        margin-left: 16%;
+    }
+
+    .another_row {
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Change_photo {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .Fule_name {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .Em_cl_proj {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Lich_proj {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+
+    .another_row_last {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*----------------------- КОНЕЦ Lichka -------------------------------*/
+    /*----------------------- FAQ -------------------------------*/
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+
+    }
+
+    /*----------------------- КОНЕЦ FAQ -------------------------------*/
+
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio_spisok_con {
+        
+        margin-bottom: 20px;
+        border-radius: 30px;
+        width: 300px;
+        height: 200px;
+        background: url('../img/qtPz0qNj1YU2.png');
+        color: white;
+        text-align: center;
+        margin-bottom: 100px;
+        margin-left: 11.5%;
+    }
+    .portfolio_spisok_con::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 30px;
+        z-index: 1;
+        display: none;
+    }
+    .portfolio_spisok_con p {
+        font-size: 15px;
+        margin-top: 64px;
+        border-radius: 0 0 30px 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .portfolio_con_back {
+        background-size: cover;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.6);
+        z-index: 1;
+    }
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+@media screen and (max-width:375px) {
+    header {
+        position: fixed;
+        height: 60px;
+        z-index: 60;
+        width: 100%;
+        background: #5582BD;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+        z-index: 55;
+        cursor: pointer;
+
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        z-index: 55;
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+
+        right: -100%;
+
+        width: 300px;
+        padding-bottom: 50px;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 45;
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 50;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+        display: flex;
+
+    }
+
+    .hamburger-menu img {
+        width: 40%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .slider_{
+        flex-direction: column;
+    }
+    .slider_first{
+        width: 100%;
+    }
+    .text_second{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .index_fon_back h1{
+        font-size: 55px;
+        padding-top: 25px;
+    }
+
+    /*----------------------- НАСТАВНИКИ -------------------------------*/
+    .nas {
+        padding-top: 10%;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .nas_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nas_li {
+        margin: 15px auto;
+        background-color: #fff;
+        font-size: 11px;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 330px;
+        list-style: none;
+        font-size: 13px;
+
+    }
+
+
+    .nas_li img {
+        width: 150px;
+        height: 150px;
+        margin-top: 10%;
+        margin-left: 0px;
+    }
+
+    .nas_name {
+        padding-top: 20px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+        display: none;
+    }
+
+    .nas_kontact {
+
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_F {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .nas_li_ul {
+        list-style: none;
+
+    }
+
+    .nas_li_ul li {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+
+
+    /*----------------------- КОНЕЦ НАСТАВНИКИ -------------------------------*/
+    /*----------------------- Футер -------------------------------*/
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 0;
+        padding-top: 5px;
+        margin-top: auto;
+    }
+
+    .footer_img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .footer_contacts {
+        font-size: 13px;
+    }
+
+    .footer ul {
+        margin-left: 0;
+    }
+
+    .footer ul li {
+        margin-left: 2%;
+        float: left;
+        list-style: none;
+    }
+
+
+
+    /*----------------------- КОНЕЦ Футера -------------------------------*/
+
+    /*----------------------- НАЧАЛО TEAM -------------------------------*/
+
+    .team_div_back {
+        padding-top: 5%;
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .team_div_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .team_div_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(230, 178, 47, 0.2);
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: 3.5%;
+        margin-top: 20%;
+
+    }
+    .img_team {
+        border-radius: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+        width: 80%;
+        height: 80%;
+    }
+    .team_opis_tex {
+        background: #FCF5B3;
+        width: 80%;
+        height: 130px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .team_opis_tex p {
+        margin-left: 1%;
+        padding-top: 15px;
+    }
+
+    /*----------------------- КОНЕЦ Team -------------------------------*/
+
+    /*----------------------- НАЧАЛО TABLE -------------------------------*/
+
+    .table_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+    }
+
+    .table_fon_fon {
+        width: 100%;
+        margin-left: 0%;
+        position: relative;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 5%;
+        font-size: 14px;
+    }
+
+    .table_fon_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .table_fon_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+    }
+    /*----------------------- КОНЕЦ TABLE -------------------------------*/
+
+    /*----------------------- НАЧАЛО NASLICHKA -------------------------------*/
+
+    .lich {
+        display: none;
+    }
+
+    .nas_lich_table {
+        display: none;
+    }
+
+    .nas_table_fon {
+        padding-top: 20%;
+
+    }
+
+    .TEL {
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 20px 20px 0px 0px;
+        background: #fff;
+        font-size: 15px;
+
+    }
+
+    .Tel_photo {
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_photo img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    .Tel_name {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .Tel_ho_co {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_Hobby {
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+
+    .Tel_Hobby p {
+        padding-top: 5px;
+    }
+
+    .Tel_Hobby ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_contacts {
+        text-align: center;
+        width: 50%;
+    }
+
+    .Tel_contacts p {
+        padding-top: 5px;
+    }
+
+    .Tel_contacts ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_js {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_js p {
+        padding-bottom: 5px;
+    }
+
+    .naslich_tel {
+        padding-top: 20px;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    /*----------------------- КОНЕЦ NASLICHKA -------------------------------*/
+
+    /*----------------------- НАЧАЛО Lichka -------------------------------*/
+    .lichka_con_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .lichka_con_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lichka_con_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .Mob_TAb {
+        border-radius: 20px;
+        margin-top: 10%;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        background: #fff;
+        border: 1px solid gray;
+    }
+
+    .First_row {
+        padding-top: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .First_row img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        margin-left: 16%;
+    }
+
+    .another_row {
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Change_photo {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .Fule_name {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .Em_cl_proj {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Lich_proj {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+
+    .another_row_last {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*----------------------- КОНЕЦ Lichka -------------------------------*/
+    /*----------------------- FAQ -------------------------------*/
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+
+    }
+
+    /*----------------------- КОНЕЦ FAQ -------------------------------*/
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio_spisok_con {
+        margin-left: 9.3%;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        width: 300px;
+        height: 200px;
+        background: url('../img/qtPz0qNj1YU2.png');
+        color: white;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.65);
+        z-index: 1;
+    }
+    .portfolio_spisok_con p {
+        font-size: 16px;
+        min-height: 76px;
+        margin-top: 62px;
+        border-radius: 0 0 30px 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .portfolio_con_back {
+        background-size: cover;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.65);
+        z-index: 1;
+    }
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+@media screen and (max-width:360px) {
+    header {
+        position: fixed;
+        height: 60px;
+        z-index: 60;
+        width: 100%;
+        background: #5582BD;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        right: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+        z-index: 55;
+        cursor: pointer;
+
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        z-index: 55;
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+
+        right: -100%;
+
+        width: 300px;
+        padding-bottom: 50px;
+
+        margin: 0;
+        padding: 80px 0;
+
+        list-style: none;
+
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        z-index: 45;
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        z-index: 50;
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+        display: flex;
+
+    }
+
+    .hamburger-menu img {
+        width: 40%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .slider_{
+        flex-direction: column;
+    }
+    .slider_first{
+        width: 100%;
+    }
+    .text_second{
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .index_fon_back h1{
+        font-size: 55px;
+        padding-top: 25px;
+    }
+
+    /*----------------------- НАСТАВНИКИ -------------------------------*/
+    .nas {
+        padding-top: 10%;
+    }
+
+    .NAS_P input {
+        width: 100%;
+        height: 42px;
+        opacity: 0.8;
+        padding-left: 15px;
+        
+    }
+    
+    .NAS_P button {
+        height: 26px;
+        width: 26px;
+        position: absolute;
+        top: 8px;
+        right: 0px;
+        background: none;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .NAS_P_in {
+        width: 80%;
+        margin-left: 10%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .nas_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        /*height: 567px;*/
+    }
+
+    .nas_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        /*background: rgba(0,0,0,.8);*/
+        z-index: 1;
+    }
+
+    .blabla {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .nas_li_ul {
+        list-style: none;
+        background-color: #fff;
+    }
+
+    .nas_ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nas_li {
+        margin: 15px auto;
+        background-color: #fff;
+        font-size: 11px;
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25), inset 5px 5px 4px rgba(0, 0, 0, 0.25);
+        width: 300px;
+        list-style: none;
+        font-size: 13px;
+
+    }
+
+
+    .nas_li img {
+        width: 130px;
+        height: 130px;
+        margin-top: 10%;
+        margin-left: 0px;
+    }
+
+    .nas_name {
+        padding-top: 20px;
+        margin-top: 5%;
+        text-align: center;
+
+    }
+
+    .nas_opisanie {
+        padding-top: 20px;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 5%;
+        display: none;
+    }
+
+    .nas_kontact {
+
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .nas_F {
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+    }
+
+    .nas_li_ul {
+        list-style: none;
+
+    }
+
+    .nas_li_ul li {
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+
+
+    /*----------------------- КОНЕЦ НАСТАВНИКИ -------------------------------*/
+    /*----------------------- Футер -------------------------------*/
+    .footer {
+        /*margin-top: 15%;*/
+        margin-left: 0;
+        padding-top: 5px;
+        margin-top: auto;
+    }
+
+    .footer_img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .footer_contacts {
+        font-size: 12px;
+    }
+
+    .footer ul {
+        margin-left: 0;
+    }
+
+    .footer ul li {
+        margin-left: 2%;
+        float: left;
+        list-style: none;
+    }
+
+
+
+    /*----------------------- КОНЕЦ Футера -------------------------------*/
+
+    /*----------------------- НАЧАЛО TEAM -------------------------------*/
+
+    team_div_back {
+        padding-top: 5%;
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .team_div_back > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .team_div_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(230, 178, 47, 0.2);
+    }
+
+    .team_container {
+        position: relative;
+        background: #FFFFFF;
+        border: 5px solid #283186;
+        border-radius: 50px;
+        width: 90%;
+        margin-left: 4.5%;
+        margin-top: 20%;
+
+    }
+
+    /*----------------------- КОНЕЦ Team -------------------------------*/
+
+    /*----------------------- НАЧАЛО TABLE -------------------------------*/
+
+    .table_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+    }
+
+    .table_fon_fon {
+        width: 100%;
+        margin-left: 0%;
+        position: relative;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 5%;
+        font-size: 14px;
+    }
+
+    .table_fon_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .table_fon_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+    }
+    /*----------------------- КОНЕЦ TABLE -------------------------------*/
+
+    /*----------------------- НАЧАЛО NASLICHKA -------------------------------*/
+
+    .lich {
+        display: none;
+    }
+
+    .nas_lich_table {
+        display: none;
+    }
+
+    .nas_table_fon {
+        padding-top: 20%;
+
+    }
+
+    .TEL {
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-radius: 20px 20px 0px 0px;
+        background: #fff;
+
+    }
+
+    .Tel_photo {
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_photo img {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    .Tel_name {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .Tel_ho_co {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_Hobby {
+        width: 50%;
+        border-right: 2px solid black;
+        text-align: center;
+    }
+
+    .Tel_Hobby p {
+        padding-top: 5px;
+    }
+
+    .Tel_Hobby ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_contacts {
+        text-align: center;
+        width: 50%;
+    }
+
+    .Tel_contacts p {
+        padding-top: 5px;
+    }
+
+    .Tel_contacts ul {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        list-style: none;
+    }
+
+    .Tel_js {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid black;
+    }
+
+    .Tel_js p {
+        padding-bottom: 5px;
+    }
+
+    .naslich_tel {
+        padding-top: 20px;
+    }
+
+    .nas_table_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .nas_table_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .nas_table_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    /*----------------------- КОНЕЦ NASLICHKA -------------------------------*/
+
+    /*----------------------- НАЧАЛО Lichka -------------------------------*/
+    .lichka_con_fon {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+
+    .lichka_con_fon > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lichka_con_fon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .profil {
+        display: none;
+    }
+
+    .Mob_TAb {
+        border-radius: 20px;
+        margin-top: 10%;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        background: #fff;
+        border: 1px solid gray;
+    }
+
+    .First_row {
+        padding-top: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .First_row img {
+        border-radius: 50%;
+        padding-bottom: 20px;
+        margin-left: 16%;
+    }
+
+    .another_row {
+        border-bottom: 1px solid gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Change_photo {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .Fule_name {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .Em_cl_proj {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Lich_proj {
+        margin-left: 15px;
+        padding-bottom: 8px;
+    }
+
+    .another_row_last {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    /*----------------------- КОНЕЦ Lichka -------------------------------*/
+    /*----------------------- FAQ -------------------------------*/
+    .faq_fon {
+        background: url('../img/qtPz0qNj1YU2.png');
+        background-size: cover;
+    }
+
+    .faq_fon_con {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    .faq_fon_con > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .faq_fon_con::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+
+    .wrapper {
+        border-radius: 20px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+
+
+    }
+
+    /*----------------------- КОНЕЦ FAQ -------------------------------*/
+    /*----------------------- ПОРТФОЛИО ПРОЕКТОВ ---------------------*/
+    .portfolio_con_back {
+        position: relative;
+        width: 100%;
+        margin-left: 0%;
+        background: url('../img/54vqUAPPfi4.jpg');
+        background-size: cover;
+    }
+    
+    .portfolio_con_back > * {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(230, 178, 47, 0.2);
+        z-index: 1;
+    }
+    .portfolio_first_row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .portfolio_spisok_con {
+        margin-left: 8.5%;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        width: 300px;
+        height: 200px;
+        background: url('../img/qtPz0qNj1YU2.png');
+        color: white;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .portfolio_spisok_con::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 30px;
+        z-index: 1;
+        display: none;
+    }
+    .portfolio_spisok_con p {
+        font-size: 15px;
+        margin-top: 55px;
+        border-radius: 0 0 30px 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .portfolio_con_back {
+        background-size: cover;
+    }
+    .portfolio_con_back::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(236, 202, 114, 0.6);
+        z-index: 1;
+    }
+    .second_row_por {
+        margin-top: 0px;
+    }
+    
+    .third_con_por {
+        margin-bottom: 50px;
+    }
+    .portfolio_form {
+        padding-top: 75px;
+        padding-bottom: 10px;
+    }
+    /*----------------------- КОНЕЦ ПОРТФОЛИО -----------------------*/
+}
+
+.Tel_contacts {
+    width: 100%;
+}
+
+.Tel_Hobby {
+    display: none;
+}
