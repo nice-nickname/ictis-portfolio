@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    
+    <style>
+
+        .__govno > * , .__mocha > * { 
+            width: 300px;
+        }
+
+        .__govno, .__mocha {
+            flex-direction: column;
+            display: flex;
+            display: inline-flex;
+        }
+
+    </style>
+
+    <main>
+
+        <form enctype="multipart/form-data">
+            <input type="text" id="input_projectName" placeholder="Название проекта...">
+            <input type="text" id="input_projectInfo" placeholder="Информация о проекте...">
+            
+            <input type="number" id="input_teamId" placeholder="ID комманды">
+            <input type="number" id="input_course" placeholder="Курс...">
+            <input type="number" id="input_mark" placeholder="Оценка...">
+            <input type="number" id="input_categoryId" placeholder="ID категории">
+
+            
+            <input type="button" value="Создать" onclick="send()"/>
+        </form>
+        <form>
+            <input type="text" id="deleteId" placeholder="Id проекта для удаления">
+            <input type="button" value="Удалить" onclick="deleteTeam()">
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+    <script>
+        let send = () => {
+
+            let teamId = document.getElementById('input_teamId').value
+            let course = document.getElementById('input_course').value
+            let name = document.getElementById('input_projectName').value
+            let info = document.getElementById('input_projectInfo').value
+            let mark = document.getElementById('input_mark').value
+            let categoryId = document.getElementById('input_categoryId').value
+
+            let headers = new Headers()
+            headers.append("Content-Type", "application/json")
+
+            let raw = JSON.stringify({
+                project: {
+                    project_name: name,
+                    id_team: teamId,
+                    project_course: course,
+                    project_info: info,
+                    project_mark: mark,
+                    id_category: categoryId,
+                }
+            });
+
+            console.log(raw);
+
+            sendRequest('POST', '/api/projects', headers, raw, (data) => {
+                console.log(data)
+            })
+        }
+
+        let deleteTeam = () => {
+            let id = document.getElementById('deleteId').value
+
+            if (id) {
+                deleteSmth('projects', id)
+            }
+        }
+    </script>
+</html>

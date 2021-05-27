@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    
+    <style>
+
+        .__govno > * , .__mocha > * { 
+            width: 300px;
+        }
+
+        .__govno, .__mocha {
+            flex-direction: column;
+            display: flex;
+            display: inline-flex;
+        }
+
+    </style>
+
+    <main>
+
+        <form enctype="multipart/form-data">
+            <input type="file" id="input_file">
+            <input type="text" id="input_teamName" placeholder="Название команды">
+            
+            <input type="number" id="input_mentorId" placeholder="ID наставника">
+
+            <div class="form-block-inputs">
+
+                <div class="__govno" id="ass">
+
+                    <input type="number" placeholder="ID 1 студента">
+                    <input type="number" placeholder="ID 2 студента">
+                    <input type="number" placeholder="ID 3 студента">
+                    <input type="number" placeholder="ID 4 студента">
+                    <input type="number" placeholder="ID 5 студента">
+                    <input type="number" placeholder="ID 6 студента">
+                    <input type="number" placeholder="ID 7 студента">
+                    <input type="number" placeholder="ID 8 студента">
+        
+                </div>
+        
+                <div class="__mocha" id="dick">
+        
+                    <input type="text" placeholder="Роль 1 студента">
+                    <input type="text" placeholder="Роль 2 студента">
+                    <input type="text" placeholder="Роль 3 студента">
+                    <input type="text" placeholder="Роль 4 студента">
+                    <input type="text" placeholder="Роль 5 студента">
+                    <input type="text" placeholder="Роль 6 студента">
+                    <input type="text" placeholder="Роль 7 студента">
+                    <input type="text" placeholder="Роль 8 студента">
+        
+                </div>
+
+            </div>
+
+            <input type="button" value="Создать" onclick="send()"/>
+        </form>
+        <form>
+            <input type="text" id="deleteId" placeholder="Id комманды для удаления">
+            <input type="button" value="Удалить" onclick="deleteTeam()">
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+    <script>
+        let send = () => {
+            let formdata = new FormData();
+
+            let files = document.getElementById("input_file").files
+            
+            let team_name = document.getElementById("input_teamName").value
+            let id_mentor = document.getElementById("input_mentorId").value
+            
+            let ids_students = []
+            let students_roles = []
+
+            document.getElementById('ass').childNodes.forEach((v, i) => {
+                if (v.value) {
+                    ids_students.push(v.value)                    
+                }
+            })
+
+            document.getElementById('dick').childNodes.forEach((v, i) => {
+                if (v.value) {
+                    students_roles.push(v.value)
+                }
+            })
+
+            let raw = JSON.stringify({
+                team_name: team_name,
+                id_mentor: id_mentor,
+                ids_students: ids_students,
+                students_roles: students_roles
+            });
+
+            formdata.append("team", raw)
+            formdata.append("image", files[0]);
+
+            var requestOptions = {
+                method: 'POST',
+                body: formdata,
+            };
+
+            sendRequest('POST', '/api/teams', undefined, formdata, (data) => {
+                console.log(data)
+            })
+        }
+
+        let deleteTeam = () => {
+            let id = document.getElementById('deleteId').value
+
+            if (id) {
+                deleteSmth('teams', id)
+            }
+        }
+    </script>
+</html>

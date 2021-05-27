@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <main>
+
+        <form enctype="multipart/form-data">
+            <input type="file" id="input_file">
+            <input type="text" id="input_name" placeholder="ФИО">
+            <input type="text" id="input_email" placeholder="Почта">
+            <input type="text" id="input_info" placeholder="Информация о наставнике...">
+            <input type="text" id="input_phone" placeholder="Номер телефона...">
+            <input type="text" id="input_link" placeholder="Ссылка на соц. сеть...">
+            <input type="button" onclick="send()"/>
+        </form>
+
+    </main>
+
+    <script src="./script.js"></script>
+    <script>
+        let send = () => {
+            let formdata = new FormData();
+            let files = document.getElementById("input_file").files
+            let name = document.getElementById("input_name").value
+            let email = document.getElementById("input_email").value
+            let info = document.getElementById("input_info").value
+            let phone = document.getElementById("input_phone").value
+            let link = document.getElementById("input_link").value
+
+            let raw = JSON.stringify({
+                mentor_fullName: name,
+                mentor_email: email,
+                mentor_info: info,
+                mentor_link: link,
+                mentor_phone: phone
+            });
+
+            formdata.append("mentor", raw)
+            formdata.append("image", files[0], "лоп.png");
+
+            sendRequest('POST', '/api/mentors', undefined, formdata, data => {
+                console.log(data)
+            })
+        }
+    </script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <main>
+
+        <form enctype="multipart/form-data">
+
+            <input type="text" id="input_studentName" placeholder="Имя студента...">
+            <input type="text" id="input_studentEmail" placeholder="Почта студента...">
+            <input type="number" id="input_studentYear" placeholder="Год начала обучения студента...">
+            
+            <input type="button" onclick="send()"/>
+        </form>
+        <form>
+            <input type="text" id="deleteId" placeholder="Id удаляемого студента" onclick="deleteStudent()" >
+            <input type="button" value="Delete">
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+    <script>
+        let send = () => {
+            
+            let headers = new Headers()
+            headers.append("Content-Type", "application/json")
+
+            let name = document.getElementById("input_studentName").value
+            let email = document.getElementById("input_studentEmail").value
+            let year = document.getElementById("input_studentYear").value
+
+            let raw = JSON.stringify({
+                student: {
+                    student_fullName: name,
+                    student_email: email,
+                    student_year: year
+                }
+            });
+            console.log(raw)
+            sendRequest('POST', '/api/students', headers, raw, data => {
+                console.log(data)
+            })
+        }
+
+        let deleteStudent = () => {
+            let id = document.getElementById('deleteId').value
+
+            if (id) {
+                deleteSmth('students', id)
+            }
+        }
+    </script>
+</html>
