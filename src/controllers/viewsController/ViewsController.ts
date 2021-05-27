@@ -2,12 +2,13 @@ import { Request, Response, NextFunction } from "express";
 import { authMethods, SessionUser } from "../../lib";
 import { ICategory } from "../../services/projectServices/CategoriesService";
 import { IProject } from "../../services/projectServices/ProjectService";
-import { CategoriesService, MentorService, ProjectService } from "../../services/services";
+import { CategoriesService, MentorService, ProjectService, StudentService } from "../../services/services";
 import { IMentor } from "../../services/userServices/MentorService";
 
 let mentorsService = new MentorService()
 let projectsService = new ProjectService()
 let categoiesService = new CategoriesService()
+let studentsService = new StudentService()
 
 class ViewsController {
 
@@ -18,8 +19,17 @@ class ViewsController {
     }
 
     async renderMentors(req: Request, res: Response) {
-        let qres = await mentorsService.getAllMentors()
-        let mentors = qres.map(i => i.toJSON()) as IMentor[]
+        
+        let mentors: IMentor[]
+
+        if (req.query.query) {
+            let qres = await mentorsService.getMentorByName(req.query.query as string)
+            mentors = qres.map(i => i.toJSON()) as IMentor[]
+        }
+        else {
+            let qres = await mentorsService.getAllMentors()
+            mentors = qres.map(i => i.toJSON()) as IMentor[]
+        }
 
         res.render('mentors/mentors', {
             user: req.user,
@@ -101,11 +111,13 @@ class ViewsController {
     async renderUser(req: Request, res: Response) {
         let user = req.user as SessionUser
         let info = await authMethods.fetchUserDataFromDB(user.email)
-        // let projects = projectsService.getProjectsByStudent()
+        
+        let rawProjects = await studentsService.getProjectsByStudentEmail(user.email)
+        let projects = rawProjects?.toJSON()
         res.render('users/user', {
             user: req.user,
             userInfo: info.student,
-            //projects: projects
+            teams: (projects as any).Teams
         })
     }
 

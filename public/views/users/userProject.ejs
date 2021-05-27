@@ -1,0 +1,13 @@
+<div class="profil_proj">
+    <p style="display: inline;">Команда: </p> 
+    <a href="/project?id=<%= team.Project.id_project %> ">
+        <p style="display: inline; margin-left: 0;"><%= team.team_name %> </p>
+    </a>
+    <p>Роль в команде: <%= team.StudentsTeams.student_role %> </p>
+    <p>Оценка: <%= team.Project.project_mark %></p>
+
+    <p style="display: inline;">Наставник: </p> 
+    <a href="/mentor?id=<%= team.Mentor.id_mentor %> ">
+        <p style="display: inline; margin-left: 0; margin-bottom: 5px;"><%= team.Mentor.mentor_fullName %></p>
+    </a>
+</div>

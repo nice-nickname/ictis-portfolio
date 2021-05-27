@@ -1,0 +1,25 @@
+<div class="
+<% if (last) { %>
+    another_row_last
+<% } else { %>
+    another_row
+<% } %>">
+    <span style="margin-left: 15px;">Команда:</span>
+    <a class="Lich_proj" href="/project?id=<%= team.Project.id_projects %> ">
+         <%= team.team_name %> 
+    </a>
+    <p class="Lich_proj">
+        Роль: <%= team.StudentsTeams.student_role %>
+    </p>
+    <p class="Lich_proj">
+        Оценка: <%= team.Project.project_mark %>
+    </p>
+    <span style="margin-left: 15px;">Наставник: </span>
+    <% 
+        let names = team.Mentor.mentor_fullName.split(' ')
+        let mName = names[0] + ' ' + names[1][0] + '. ' + names[2][0] + '.'
+    %> 
+    <a class="Lich_proj" href="/mentor?id=<%= team.Mentor.id_mentor %> ">
+        <%= mName %>  
+    </a>
+</div>

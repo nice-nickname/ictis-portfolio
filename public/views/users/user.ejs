@@ -34,23 +34,14 @@
                             <div class="profil_my_projects">
                                 <h1>Мои Проекты:</h1>
                             </div>
-                            <div class="profil_proj">
-                                <p>Команда: Название</p>
-                                <p>Капитан команды: Имя капитана</p>
-                                <p>Состояние: Защищен(в процессе или не защищен)</p>
-                                <p>Наставник: О. А. Стельмах (Почта)</p>
-                            </div>
-                            <div class="profil_proj">
-                                <p>Команда: Название</p>
-                                <p>Капитан команды: Имя капитана</p>
-                                <p>Состояние: Защищен(в процессе или не защищен)</p>
-                                <p>Наставник: О. А. Стельмах (Почта)</p>
-                            </div>
-                            <div class="profil_proj" style="border: none;">
-                                <p>Команда: Название</p>
-                                <p>Капитан команды: Имя капитана</p>
-                                <p>Состояние: Защищен(в процессе или не защищен)</p>
-                                <p>Наставник: О. А. Стельмах (Почта)</p>
+                            <div class="profil_my_projects-list" style="overflow: scroll; overflow-x: hidden;">
+                                <% for( let i = 0; i < teams.length; i++ ) { %>
+                                
+                                    <%- include('./userProject', {
+                                        team: teams[i]
+                                    }) %> 
+
+                                <% } %> 
                             </div>
                         </div>
                     </div>
@@ -62,54 +53,23 @@
                             <p class="Em_cl_proj"><%= userInfo.levelLearn %>, Направление: <%= userInfo.speciality %>, <%= userInfo.grade %>  Курс</p>
                             <p class="Em_cl_proj">Мои проекты:</p>
                         </div>
-                        <div class="another_row">
-                            <p class="Lich_proj">
-                                Команда: Название
-                            </p>
-                            <p class="Lich_proj">
-                                Капитан команды: Имя капитана
-                                (или твое имя)
-                            </p>
-                            <p class="Lich_proj">
-                                Состояние: Защищен(в процессе или не защищен)
-                            </p>
-                            <p class="Lich_proj">
-                                Наставник: О. А. Стельмах
-                                (Почта)
-                            </p>
-                        </div>
-                        <div class="another_row">
-                            <p class="Lich_proj">
-                                Команда: NETRUNNERS
-                            </p>
-                            <p class="Lich_proj">
-                                Капитан команды: Д. Ю. Юрьевна
-                                (dyureva@sfedu.ru)
-                            </p>
-                            <p class="Lich_proj">
-                                Состояние: В процессе
-                            </p>
-                            <p class="Lich_proj">
-                                Наставник: О. А. Стельмах
-                                (Почта)
-                            </p>
-                        </div>
-                        <div class="another_row_last">
-                            <p class="Lich_proj">
-                                Команда: NETRUNNERS
-                            </p>
-                            <p class="Lich_proj">
-                                Капитан команды: Д. Ю. Юрьевна
-                                (dyureva@sfedu.ru)
-                            </p>
-                            <p class="Lich_proj">
-                                Состояние: Не защищен
-                            </p>
-                            <p class="Lich_proj">
-                                Наставник: О. А. Стельмах
-                                (Почта)
-                            </p>
-                        </div>
+                        
+                        <% for( let i = 0; i < teams.length; i++ ) { %>
+                            <% 
+                                let isLast = false;
+                                if (i == teams.length - 1) {
+                                    isLast = true
+                                }    
+                            %> 
+                            <%- include('./userProjectMobile', {
+                                team: teams[i],
+                                last: isLast
+                            }) %> 
+
+                        <% } %> 
+                        
+                        
+
                     </div>
                 </div>
             </div>

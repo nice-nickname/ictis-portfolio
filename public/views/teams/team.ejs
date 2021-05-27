@@ -39,9 +39,17 @@
                         <p>Название проекта:
                             <%= project.project_name %> 
                         </p><br />
-                        <p>Наставник:
-                            <%= project.Team.Mentor.mentor_fullName %> 
-                        </p><br />
+                        
+                        <span>Наставник:</span>
+                        
+                        <a  href="/mentor?id=<%= project.Team.Mentor.id_mentor %>">
+                            <p style="display: inline;">
+                                <%= project.Team.Mentor.mentor_fullName %> 
+                            </p>
+                        </a>
+                        
+                        <br />
+                        
                         <p>Состав:
                         <div style="margin-left: 5%;">
                             <% 
@@ -76,10 +84,7 @@
 
                         <p>
                             Описание:
-                            <script>
-                                var name = "Описание проекта: За несколько лет в проектном офисе были успешно реализованы работы студентов. Они продемонстрированы небольшой аудитории, заслужили высокие оценки, но не получили широкой известности. Наша задача показать образцовые работы студентов,  чтобы абитуриенты вуза, студенты и коллеги могли оценить высокий уровень навыков наших студентов.";
-                                document.write(name);
-                            </script>
+                            <%= project.project_info %> 
                         </p><br />
                         <div class="team_opis_tex">
                             <p>Техническое задание: 

@@ -16,14 +16,17 @@
                 <% } %>
                 
                 background-size: cover;
-                
+                margin: 40px auto;
             }
         </style>
-
+        <% 
+            let names = project.Team.Mentor.mentor_fullName.split(' ')
+            let mName = names[0] + ' ' + names[1][0] + '. ' + names[2][0] + '.'
+        %> 
         <p>
             Команда: <%= project.Team.team_name %> <br> 
             Тема: <%= project.project_name %> <br> 
-            Наставник: <%= project.Team.Mentor.mentor_fullName %> <br> 
+            Наставник: <%= mName %> <br> 
         </p>
 
     </div>

@@ -1,4 +1,4 @@
-import { Students } from "../../models/models";
+import { Mentors, Projects, Students, StudentsTeams, Teams } from "../../models/models";
 
 interface IStudent {
     student_fullName: string,
@@ -21,6 +21,22 @@ export default class StudentService {
             where: {
                 id_student: id
             }
+        })
+    }
+
+    async getProjectsByStudentEmail(email: string) {
+        return Students.findOne({
+            where: {
+                student_email: email
+            },
+            include: [{
+                model: Teams,
+                include: [{
+                    model: Projects
+                }, {
+                    model: Mentors
+                }]
+            }]
         })
     }
 
