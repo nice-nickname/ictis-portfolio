@@ -121,6 +121,18 @@ class ViewsController {
         })
     }
 
+    async renderRegistration(req: Request, res: Response) {
+        res.render('registration/registration', {
+            user: req.user
+        })
+    }
+
+    async renderRegistrationn(req: Request, res: Response) {
+        res.render('registration/registrationn', {
+            user: req.user
+        })
+    }
+
     async renderProjectPage(req: Request, res: Response) {
         
         let id = Number(req.query.id)

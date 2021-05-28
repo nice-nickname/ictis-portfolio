@@ -12,6 +12,7 @@
         <li><a class="menu__item" href="/faq">FAQ</a></li>
         <% if (user) { %>
             <li><a class="menu__item" href="/user"><%= user.name %></a></li>
+            <li><a class="menu__item" href="/api/auth/logout">Выход</a></li>
         <% } else { %>
             <li><a class="menu__item" href="/api/auth/redirect">Вход</a></li>
         <% } %>
