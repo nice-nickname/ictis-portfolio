@@ -1,9 +1,9 @@
 <ul class="menu">
     <li class="menu_li menu_li_img"><a href="/"><img src="img/LOGONAH 1.png" class="li_img"></a></li>
-    <li class="menu_li"><a href="/mentors">Наставники</a></li>
-    <li class="menu_li"><a href="/registration">Записаться на проект</a></li>
-    <li class="menu_li"><a href="/projects">Портфолию  проектов </a></li>
-    <li class="menu_li"><a href="/faq">FAQ</a></li>
+    <li id="menu-1" class="menu_li"><a href="/mentors">Наставники</a></li>
+    <li id="menu-2" class="menu_li"><a href="/registration">Записаться на проект</a></li>
+    <li id="menu-3" class="menu_li"><a href="/projects">Портфолию  проектов </a></li>
+    <li id="menu-4" class="menu_li"><a href="/faq">FAQ</a></li>
     <% if (user) { %>
         <%  
             let name = user.name
@@ -19,8 +19,11 @@
                 }
             }
         %> 
-        <li class="menu_li"><a href="/user"><%= outName %></a></li>
+        <li id="menu-5" class="menu_li"><a href="/user"><%= outName %></a></li>
     <% } else { %>
-        <li class="menu_li"><a href="/api/auth/redirect">Вход</a></li>
+        <li id="menu-5" class="menu_li"><a href="/api/auth/redirect">Вход</a></li>
     <% } %>
 </ul> 
+<script>
+    document.getElementById("menu-<%= activeElement%>").classList.add("menu_li_active")
+</script>

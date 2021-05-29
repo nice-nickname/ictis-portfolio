@@ -233,7 +233,7 @@ header {
 }
 
 .nas {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -285,7 +285,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
     /*height: 567px;*/
 }
@@ -302,7 +301,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
     /*background: rgba(0,0,0,.8);*/
     z-index: 1;
 }
@@ -384,9 +382,8 @@ header {
 
 .team_div {
 
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
-
 
 
 }
@@ -397,7 +394,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -414,7 +410,6 @@ header {
     right: 0;
     bottom: 0;
     z-index: 1;
-    background: rgba(230, 178, 47, 0.2);
 }
 
 .team_container {
@@ -573,7 +568,8 @@ header {
 }
 
 .faq_fon {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background-size: cover;
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -581,7 +577,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
     padding-bottom: 50px;
 }
@@ -598,7 +593,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
     z-index: 1;
 }
 
@@ -612,7 +606,7 @@ header {
 }
 
 .table_fon {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -620,7 +614,6 @@ header {
     width: 90%;
     margin-left: 5%;
     position: relative;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
     padding-bottom: 5%;
 }
@@ -637,7 +630,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
 }
 
 .info_table {
@@ -689,7 +681,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -705,12 +696,11 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
     z-index: 1;
 }
 
 .lichka_con {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -795,7 +785,7 @@ header {
 }
 
 .portfolio_con {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -803,7 +793,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -819,7 +808,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
     z-index: 1;
 }
 
@@ -887,7 +875,7 @@ header {
 }
 
 .nas_table {
-    background: url('../img/qtPz0qNj1YU21.png');
+    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
 }
 
@@ -895,7 +883,6 @@ header {
     position: relative;
     width: 90%;
     margin-left: 5%;
-    background: url('../img/54vqUAPPfi4.jpg');
     background-size: cover;
     padding-bottom: 50px;
 }
@@ -912,7 +899,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(230, 178, 47, 0.2);
     z-index: 1;
 }
 
@@ -1098,7 +1084,7 @@ header {
     }
 
     .nas {
-        background: url('`Pz0qNj1YU21.png');
+        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -1118,7 +1104,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -1135,7 +1120,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -1204,7 +1188,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -1221,7 +1204,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -1632,7 +1614,6 @@ header {
     }
 
     .faq_fon {
-        background: url('../img/qtPz0qNj1YU21.png');
         background-size: cover;
     }
 
@@ -1640,7 +1621,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -1657,7 +1637,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .profil_img {
@@ -1736,7 +1715,7 @@ header {
     }
 
     .nas {
-        background: url('../img/qtPz0qNj1YU21.png');
+        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -1756,7 +1735,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -1773,7 +1751,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -1836,7 +1813,6 @@ header {
     }
 
     .nas_table {
-        background: url('../img/qtPz0qNj1YU21.png');
         background-size: cover;
     }
 
@@ -1844,7 +1820,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -1861,7 +1836,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -2268,7 +2242,6 @@ header {
     }
 
     .faq_fon {
-        background: url('../img/qtPz0qNj1YU21.png');
         background-size: cover;
     }
 
@@ -2276,7 +2249,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -2293,7 +2265,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .profil_img {
@@ -2315,7 +2286,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
     
@@ -2331,7 +2301,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -2421,7 +2390,7 @@ header {
     }
 
     .nas {
-        background: url('../img/qtPz0qNj1YU21.png');
+        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -2441,7 +2410,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -2458,7 +2426,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -2527,7 +2494,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -2544,7 +2510,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -2949,7 +2914,6 @@ header {
     }
 
     .faq_fon {
-        background: url('../img/qtPz0qNj1YU21.png');
         background-size: cover;
     }
 
@@ -2957,7 +2921,6 @@ header {
         position: relative;
         width: 90%;
         margin-left: 5%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -2974,7 +2937,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 }
@@ -3144,6 +3106,7 @@ header {
 
     /*----------------------- НАСТАВНИКИ -------------------------------*/
     .nas {
+        
         padding-top: 4%;
     }
 
@@ -3158,7 +3121,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -3175,7 +3137,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -3294,7 +3255,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -3311,7 +3271,6 @@ header {
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(230, 178, 47, 0.2);
     }
 
     .team_container {
@@ -3359,7 +3318,6 @@ header {
         width: 100%;
         margin-left: 0%;
         position: relative;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 5%;
         font-size: 25px;
@@ -3377,7 +3335,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
     }
     /*----------------------- КОНЕЦ TABLE -------------------------------*/
 
@@ -3487,7 +3444,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
         font-size: 25px;
@@ -3505,7 +3461,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -3516,7 +3471,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         font-size: 25px;
     }
@@ -3533,7 +3487,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -3609,7 +3562,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -3626,7 +3578,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -3644,7 +3595,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -3661,7 +3611,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -3710,7 +3659,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.6);
         z-index: 1;
     }
     .second_row_por {
@@ -3890,7 +3838,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -3907,7 +3854,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -4026,7 +3972,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -4043,7 +3988,6 @@ header {
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(230, 178, 47, 0.2);
     }
 
     .team_container {
@@ -4090,7 +4034,6 @@ header {
         width: 100%;
         margin-left: 0%;
         position: relative;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 5%;
         font-size: 14px;
@@ -4108,7 +4051,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
     }
     /*----------------------- КОНЕЦ TABLE -------------------------------*/
 
@@ -4215,7 +4157,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -4232,7 +4173,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -4243,7 +4183,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -4259,7 +4198,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -4332,7 +4270,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -4349,7 +4286,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -4378,7 +4314,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
     
@@ -4394,7 +4329,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -4441,7 +4375,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.6);
         z-index: 1;
     }
     .second_row_por {
@@ -4628,7 +4561,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -4645,7 +4577,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -4764,7 +4695,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -4781,7 +4711,6 @@ header {
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(230, 178, 47, 0.2);
     }
 
     .team_container {
@@ -4830,7 +4759,6 @@ header {
         width: 100%;
         margin-left: 0%;
         position: relative;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 5%;
         font-size: 14px;
@@ -4848,7 +4776,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
     }
     /*----------------------- КОНЕЦ TABLE -------------------------------*/
 
@@ -4955,7 +4882,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -4972,7 +4898,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -4983,7 +4908,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -4999,7 +4923,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -5071,7 +4994,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -5088,7 +5010,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -5107,7 +5028,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
     
@@ -5123,7 +5043,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -5171,7 +5090,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.6);
         z-index: 1;
     }
     .second_row_por {
@@ -5350,7 +5268,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -5367,7 +5284,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -5485,7 +5401,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -5502,7 +5417,6 @@ header {
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(230, 178, 47, 0.2);
     }
 
     .team_container {
@@ -5549,7 +5463,6 @@ header {
         width: 100%;
         margin-left: 0%;
         position: relative;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 5%;
         font-size: 14px;
@@ -5567,7 +5480,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
     }
     /*----------------------- КОНЕЦ TABLE -------------------------------*/
 
@@ -5675,7 +5587,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -5692,7 +5603,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -5703,7 +5613,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -5719,7 +5628,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -5791,7 +5699,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -5808,7 +5715,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -5826,7 +5732,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
     
@@ -5842,7 +5747,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -5868,7 +5772,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.65);
         z-index: 1;
     }
     .portfolio_spisok_con p {
@@ -5888,7 +5791,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.65);
         z-index: 1;
     }
     .second_row_por {
@@ -6086,7 +5988,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         /*height: 567px;*/
     }
@@ -6103,7 +6004,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         /*background: rgba(0,0,0,.8);*/
         z-index: 1;
     }
@@ -6221,7 +6121,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -6238,7 +6137,6 @@ header {
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(230, 178, 47, 0.2);
     }
 
     .team_container {
@@ -6264,7 +6162,6 @@ header {
         width: 100%;
         margin-left: 0%;
         position: relative;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 5%;
         font-size: 14px;
@@ -6282,7 +6179,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
     }
     /*----------------------- КОНЕЦ TABLE -------------------------------*/
 
@@ -6389,7 +6285,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -6406,7 +6301,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -6417,7 +6311,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
 
@@ -6433,7 +6326,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -6505,7 +6397,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
         padding-bottom: 50px;
     }
@@ -6522,7 +6413,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
 
@@ -6540,7 +6430,6 @@ header {
         position: relative;
         width: 100%;
         margin-left: 0%;
-        background: url('../img/54vqUAPPfi4.jpg');
         background-size: cover;
     }
     
@@ -6556,7 +6445,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(230, 178, 47, 0.2);
         z-index: 1;
     }
     .portfolio_first_row {
@@ -6603,7 +6491,6 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(236, 202, 114, 0.6);
         z-index: 1;
     }
     .second_row_por {
